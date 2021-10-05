@@ -80,7 +80,7 @@ button:hover {
 	background-color: white;}
 .sc-carousel-dot__dot{background:white!important;border-radius:2px!important;opacity:1!important;width:4px!important;height:4px!important;}
 .sc-carousel-dot__dot_active{background:white!important;border-radius:2px!important;opacity:1!important;width:24px!important;height:4px!important;}
-.sc-carousel-dots__containe{margin-top:1rem;}
+.sc-carousel-dots__container{margin-top:1rem;}
 .sc-carousel__arrow-container{opacity:0;}
 .nobox .sc-carousel__pages-window{box-shadow:unset!important;}
 

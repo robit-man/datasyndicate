@@ -103,7 +103,7 @@ import {
 	<FullpageSection style="background:#111!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
       <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
-				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+				<div style="padding-right: 4rem;padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
               <div class="pagenumber">
@@ -297,7 +297,6 @@ import {
 }.imgbox{max-height:504px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
 .description{text-align:left;margin-left:8rem;width:512px;}
 .half{width:50%;}
-.pagenumber{}
 .logo-container-2{height:512px;width:512px;}
 .nobox{width:calc(100vw - 18rem);}
 .underline{height:1px;margin-bottom:1rem;background-color:white;}
