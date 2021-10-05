@@ -4,409 +4,309 @@ import { slide, fade } from 'svelte/transition';
 import { address, contract, provider, nfts, balances } from '../store';
 import { Swiper, SwiperSlide } from 'swiper/svelte';
 import "swiper/css/pagination"
-import Card from "../cards/dex.svelte"
-
-
-    //Help import data from opensea and pass into SwiperSlide <3 
-    import { 
-        initProvider,
-    } from '../utils.js';
-import 'swiper/css';
-async function connectEthProvider(reconnect=false) {
-    if(!$address) {
-        await initProvider(app, reconnect);
-        $address = $address;
-    }
-}import SwiperCore, {
-  Pagination
-} from 'swiper';
-
-// install Swiper modules
-SwiperCore.use([Pagination]);
-
-
-function connectWallet(event) {
-    connectEthProvider(false);
-}   
-var metadata = {
-     "name": "SpacePepesFTM",
-     "description": "STRINGS",
-     "image": 'https://spacepepes.com/pepes/',
-     "external_url": 'https://spacepepes.com/pepes/'
-};
+import Carousel from 'svelte-carousel'
+import {
+		Fullpage,
+	 	FullpageSection,
+		FullpageSlide
+	} from 'svelte-fullpage';
+	import {
+		Container,
+		Row,
+		Col
+	} from 'sveltestrap';
+	//Include all titles of your sections, this is also used as number that indicate count of sections
+	const sections = [
+		'Svelte Fullpage',
+		'Features',
+		'GitHub',
+		'Future'
+	];
+	//Have to set to 0 (or section you wish to display as default), otherwise section will not display
+	let activeSection = 0;
+	//Same mechanics as in sections
+	const slides = [
+		'slides',
+		'arrows',
+		'drag',
+	];
+	//Also has to be 0 or specific id of slide
+	let activeSlide = 0;
 </script>
 
-<main>
-  <section class="fw first">
-    <div class="constraint hero">
-      <h1 class="hero-h1">STRINGS</h1>
-      <p style="text-transform:uppercase;font-weight:100;letter-spacing:2px;">5,555 Unique Yielding NFTs</p>
-      <div class="button-row">
-        <button>MINT<img src="/imgs/plus.svg" class="buttonicon" alt=""></button>
-        <button>STAKE<img src="/imgs/inside.svg" class="buttonicon" alt=""></button>
+<Fullpage bind:activeSection arrows drag> 
+	<FullpageSection style="background:#111!important;"  center>
+		<Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
+      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
+				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:512px;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;background:#333!important;" >
+          <div class="row ">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+              <div class="pagenumber">
+              <p style="font-size:5rem;font-weight:400;margin:unset;">01</p>
+              <div class="underline"></div>
+              <div class="page-name">Home</div>
+            </div>
+            </Col>
+            <Col style="width:auto;">
+            <div transition:fade class="rotate-title">
+              <h5 style="margin:unset!important;">COLLECTION : 100 UNIQUE FORMS</h5>
+              <p style="font-size:5rem;font-weight:100;margin:unset!important;">GEOMETRIC</p>
+              <p style="font-size:5rem;font-weight:900;color:#ee0530;margin:unset!important;"><b>FORMS</b></p>
+            </div>
+            </Col>
+              
+          </div>
+        </div>
+        <div style="padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;">
+          <iframe src="/strings.html" style="width:800px;height:800px;border-radius:400px;margin:auto;" frameborder="0"></iframe>
+          <button class="button-padding"> SKIP TO MINTING</button>
+
+        </div>
       </div>
-    </div>
-    <img src="/imgs/wave.svg" class="herobottom" alt="">
-<iframe class="stringhero" src="/strings.html" frameborder="0"></iframe>  
-</section>
-<section class="second">
-
-    <div class="container">
-      <div class="image-text-row">
-      <div class="box2">
-        <p style="font-size:3rem;font-weight:bold;">What are Strings?</p>
-        <p>Strings are a series of 5,555 unique collectible NFT's with proof of ownership stored on the Ethereum blockchain. 
-          <br><br>This collection is an artistic depiction of how type 1 strings propagate through space and time.
-          <br><br><b>Strings are the first NFT collection to be backed by their own accumulative automated yield fund. </b> <br>
-          <br>SThe Strings collection was designed to provide a long-term consistent yield to holders who stake. Keep reading to understand how this yield is generated and how it will be constantly growing.</p>
-        </div> 
-      </div> 
-
-      <div class="image-text-row">      
-        <img src="/imgs/wind(2).svg" alt="" class="box-img">
-
-      <div class="box3">
-        <p style="font-size:3rem;font-weight:bold;">A new class of NFTs</p>
-        <p>All Strings NFTs have the ability to be staked and receive rewards. These rewards are generated by seeding the sFund (smart contract) with the ETH raised from the mint event. The sFund's contracts are designed to generate yield from external yield aggregators such as yearn, curve or convex, and then reward yields to Strings stakers in the form of RENA. </p>
-        </div> 
-      </div> 
-      
-      <div class="image-text-row">
-        <div class="box3">
-        <p style="font-size:3rem;font-weight:bold;">The sFund's Acummulative Nature</p>
-        <p>All Strings NFTs have a 5% royalty on Opensea, meaning that each time a String is bought or sold this 5% is taken from the sale in the form of ETH. (Opensea royalties are rewarded once per month.)  
-
-          <br>
-          <br>
-          This royalty allows for improved yields for stakers and growth of the sFund. The distribution of the royalty fee is as follows:
-          <br>
-          - 3% is accumulated by the sFund, allowing it to grow over time and generate more total yield.  
-          <br>
-          - 2% is swapped for RENA on Uniswap and then rewarded to Strings stakers. These RENA rewards would be distributed throughout the month following royalties collection.
-          <br>
-          <br>
-          The sFund is accumulative. The base APY for each staked String NFT should increase over time.   </p>
-      </div>        
-      <img src="/imgs/yarn-ball.svg" alt="" class="box-img">
-
-    </div>
-    <div class="image-text-row">
-      <img src="/imgs/reuse-water.svg" alt="" class="box-img">
-
-      <div class="box3">
-        <p style="font-size:3rem;font-weight:bold;">Staking a Strings NFT</p>
-        <p>Each staked String is eligible to a share of yield relative to the total strings staked. This means that if a user stakes 100 Strings NFTs and there is a total of 1,000 Strings staked in the contract at the time, this user will be earning 10% of the total yields.
-<br><br>
-          All of the yields generated are first swapped for RENA on Uniswap before being rewarded to stakers. RENA is the native utility token of the Strings NFT collection and is designed to thrive with high trading volume.  </p>
+		</Container>
+	</FullpageSection>	
+  
+	<FullpageSection style="background:#ee0530!important;"  center>
+    <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
+      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
+				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+          <div class="row half">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+              <div class="pagenumber">
+              <p style="font-size:5rem;font-weight:400;margin:unset;">02</p>
+              <div class="underline"></div>
+              <div class="page-name">About</div>
+            </div>
+            </Col>
+            <Col style="width:auto;">
+            <div transition:slide class="description">
+              <p style="font-size:3rem;font-weight:100;margin:unset!important;">GENERATIVE</p>
+              <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>GEOMETRY</b></p>
+              <p>GEOMETRIC FORMS is a collection of 100 unique FORM NFTs - a digital version of generative geometry and post processed colour found in mathematics and art.
+                <br><br>
+                With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on thje Ethereum blockchain for immutable history and decentralized ownership.
+              </p>
+            </div>
+            </Col>
+              
+          </div>
+        </div>
+        <div style="padding:4rem 8rem; width:50%;display: flex;justify-content: center;flex-flow:column;">
+          <div class="img-effect">
+            <img transition:fade src="/imgs/forms/line-000363.png" style="z-index:2;position:relative;" alt="">
+            <div class="imgbox"></div>
+          </div>
+        </div>
       </div>
+		</Container>
+	</FullpageSection>
+	<FullpageSection style="background:#111!important;"  center>
+    <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
+      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
+				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+          <div class="row half">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+              <div class="pagenumber">
+              <p style="font-size:5rem;font-weight:400;margin:unset;">03</p>
+              <div class="underline"></div>
+              <div class="page-name">Gallery</div>
+            </div>
+            </Col>
+            <Col style="width:auto;">
+           
+            </Col>
+              
+          </div>
+        </div>
+        <div class="nobox" style="display: flex;justify-content: center;flex-flow:column;">
+          <Carousel class="test"
+          particlesToShow={4}
+          particlesToScroll={2}
+        >
+        <div class="nft-card">
+           
+          <div class="nft-card-inner">
+            
+            <img transition:fade src="/imgs/forms/line-000192.png" style="z-index:2;position:relative;width:256px" alt="">
+          
+          </div>
+          
+        </div>
+        <div class="nft-card">
+          <div class="nft-card-inner">
+            
+            <img transition:fade src="/imgs/forms/line-000256.png" style="z-index:2;position:relative;width:256px" alt="">
+          
+          </div>
+          
+        </div>
+        <div class="nft-card">
+          <div class="nft-card-inner">
+            
+            <img transition:fade src="/imgs/forms/line-000295.png" style="z-index:2;position:relative;width:256px" alt="">
+          
+          </div>
+          
+        </div>
+        <div class="nft-card">
+          <div class="nft-card-inner">
+            
+            <img transition:fade src="/imgs/forms/line-000372.png" style="z-index:2;position:relative;width:256px" alt="">
+          
+          </div>
+          
+        </div>
+        </Carousel>
+        </div>
+      </div>
+		</Container>
+	</FullpageSection>
+	<FullpageSection style="background:#ee0530!important;"  center>
+    <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
+      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
+				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+          <div class="row half">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+              <div class="pagenumber">
+              <p style="font-size:5rem;font-weight:400;margin:unset;">04</p>
+              <div class="underline"></div>
+              <div class="page-name">Process</div>
+            </div>
+            </Col>
+            <Col style="width:auto;">
+            <div transition:slide class="description">
 
-</div>
+              <div class="img-effect">
 
-</section>
-<section class="third">
-  <img src="/imgs/arrowbottom.svg" alt="" class="arrowtop">
-  <div class="constraint"> 
-    <p style="font-size:3rem;font-weight:bold;">Attributes and Rarities Showcase</p>
-<div class="attribute-list-wrapper">
-    
-  <div class="attribute-wrapper">
-    <div class="attribute-image">
-      <img src="/imgs/number.gif" style="width:256px;" alt="">
-    </div>
-    <div class="attribute-list">
-      <p style="font-size:3rem;font-weight:bold;margin:unset;">Number Of Strings</p>
-      <p>Single: 100 (1.8%) <br>
-        Double: 5,255 (94.6%) <br>
-        Triple: 200 (3.6%)</p>
-    </div>
-  </div>
-  <div class="attribute-wrapper">
-    <div class="attribute-image">
-      <img src="/imgs/color.gif" style="width:256px;" alt="">
-    </div>
-    <div class="attribute-list">
-      <p style="font-size:3rem;font-weight:bold;margin:unset;">Color</p>
-      <p>White: 111 (2%) <br>
-        Teal: 222 (4%) <br>
-        Red: 444 (8%) <br>
-        Purple: 666 (12%) <br>
-        Pink: 777 (14%) <br>
-        Green: 999 (18%) <br>
-        Yellow: 1111 (20%) <br>
-        Blue: 1225 (22%)</p>
-    </div>
-  </div>
-  <div class="attribute-wrapper">
-    <div class="attribute-image">
-      <img src="/imgs/type.gif" style="width:256px;" alt="">
-    </div>
-    <div class="attribute-list">
-      <p style="font-size:3rem;font-weight:bold;margin:unset;">Type</p>
-      <p>Tubular: 200 (3.6%) <br>
-        Disconnecting: 555 (10%) <br>
-        Cartoon: 800 (14.4%) <br>
-        Wobbly: 1000 (18%) <br>
-        Reversed: 1000 (18%) <br>
-        Basic: 2000 (36%)</p>
-    </div>
-  </div>
-  <div class="attribute-wrapper">
-    <div class="attribute-image">
-      <img src="/imgs/effect.gif" style="width:256px;" alt="">
-    </div>
-    <div class="attribute-list">
-      <p style="font-size:3rem;font-weight:bold;margin:unset;">Effect</p>
-      <p>Tri Morph: 222 (4%) <br>
-        Doubled: 333 (6%) <br>
-        Slowmo: 407 (7.3%) <br>
-        Soundwave: 629 (11.3%) <br>
-        Electrify: 740 (13.3%) <br>
-        Xray: 962 (17.3%) <br>
-        Glow: 1074 (19.4%) <br>
-        Basic: 1188 (21.4%)</p>
-    </div>
-  </div>
-  <div class="attribute-wrapper">
-    <div class="attribute-image">
-      <img src="/imgs/background.gif" style="width:256px;" alt="">
-    </div>
-    <div class="attribute-list">
-      <p style="font-size:3rem;font-weight:bold;margin:unset;">Background</p>
-      <p>Glitch: 300 (5.4%) <br>
-        Dark: 700 (12.6%) <br>
-        Clouded: 1755 (31.6%) <br>
-        Basic Black: 2800 (50.4%)</p>
-    </div>
-  </div>
+              <Carousel>
+                
+                <img transition:fade src="/imgs/forms/line-000346.png" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/forms/line-000234.png" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/forms/line-000382.png" style="z-index:2;position:relative;width:256px" alt="">
+               
+              </Carousel>   
 
-  </div>
-  </div>
-</section>
-<section class="fourth">
-  <img src="/imgs/footer.svg" alt="" class="arrowtop">
-  <div class="constraint"> 
-   
-  <footer><div class="nav-links">
-    <a target="_blank" href="https://twitter.com/spacepepes"><img width="64px" style="filter:invert(1);" src="/imgs/twitter.png" alt="">
-    </a>
-    <a target="_blank" href="https://discord.gg/5WrhVV5vJA"><img width="64px" style="filter:invert(1);" src="/imgs/discord.png" alt="">
-        </a>
-    <a target="_blank" href="https://discord.gg/5WrhVV5vJA"><img width="64px" style="filter:invert(1);" src="/imgs/medium.svg" alt="">
-        </a>
-    <a target="_blank" href="https://discord.gg/5WrhVV5vJA"><img width="64px" style="filter:invert(1);" src="/imgs/telegram.svg" alt="">
-        </a>
-  </div>
-<h1>STRINGS</h1></footer>
-  </div>
-</section>
-</main>
+            </div>
+          </div>
+            </Col>
+              
+          </div>
+        </div>
+        <div style="padding:4rem 2rem; width:50%;display: flex;justify-content: center;flex-flow:column;">
+          <div transition:slide class="description">
+            <p style="font-size:3rem;font-weight:100;margin:unset!important;">PURCHASING</p>
+            <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
+            <p> <b>Purchasing a Geometric Form will cost 0.5 ETH each</b>
+              <br><br>
+              Owning a FORM will grant you access to monthly art raffles air dropping from Geometric Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.
+            </p>
+          </div>
+        </div>
+      </div>
+		</Container>
+	</FullpageSection>
+	<FullpageSection style="background:#111!important;"  center>
+    <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
+      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
+				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+          <div class="row half">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+              <div class="pagenumber">
+              <p style="font-size:5rem;font-weight:400;margin:unset;">05</p>
+              <div class="underline"></div>
+              <div class="page-name">Mint</div>
+            </div>
+            </Col>
+            <Col style="width:auto;">
+            
+              <div transition:slide class="description">
+                <p style="font-size:3rem;font-weight:100;margin:unset!important;">GEOMETRIC</p>
+                <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>FORMS</b></p>
+                <p><b>Here's how to mint</b>
+                  <br><br>
+                  Click the fox and confirm with metamask
+                  <br><br>
+                  Click mint, and claim your unique ERC-721 Geometric FORM!
+                  <br><br>
+                </p>
+                <button style="margin-left:unset;" class="button-padding">MINT A FORM</button>
+
+              </div>
+            </Col>
+              
+          </div>
+        </div>
+        <div style="padding:4rem 8rem; width:50%;display: flex;justify-content: center;flex-flow:column;">
+          <div id="logo-container"></div>
+
+          <script id="rendered-js">(function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(a,b,c){var d=a("../index"),viewer=d({width:.4,height:.4,followMouse:!0,followMotion:!0});document.getElementById('logo-container').appendChild(viewer.container)},{"../index":3}],2:[function(a,b,c){b.exports={"positions":[[111.0246,52.6046,46.2259],[114.025,87.6733,58.9818],[66.192,80.898,55.3943],[72.1133,35.4918,30.8714],[97.8045,116.561,73.9788],[16.7623,58.0109,58.0782],[52.6089,30.3641,42.5561],[106.8814,31.9455,46.9133],[113.4846,38.6049,49.1215],[108.6633,43.2332,46.3154],[101.2166,15.9822,46.3082],[16.6605,-16.2883,93.6187],[40.775,-10.2288,85.2764],[23.9269,-2.5103,86.7365],[11.1691,-7.0037,99.3776],[9.5692,-34.3939,141.672],[12.596,7.1655,88.741],[61.1809,8.8142,76.9968],[39.7195,-28.9271,88.9638],[13.7962,-68.5757,132.057],[15.2674,-62.32,129.688],[14.8446,-52.6096,140.113],[12.8917,-49.7716,144.741],[35.6042,-71.758,81.0639],[47.4625,-68.6061,63.3697],[38.2486,-64.7302,38.9099],[-12.8917,-49.7716,144.741],[-13.7962,-68.5757,132.057],[17.8021,-71.758,81.0639],[19.1243,-69.0168,49.4201],[38.2486,-66.2756,17.7762],[12.8928,-36.7035,141.672],[109.284,-93.5899,27.8243],[122.118,-36.8894,35.025],[67.7668,-30.197,78.4178],[33.1807,101.852,25.3186],[9.4063,-35.5898,150.722],[-9.5692,-34.3939,141.672],[-9.4063,-35.5898,150.722],[11.4565,-37.8994,150.722],[-12.596,7.1655,88.741],[-11.1691,-7.0037,99.3776],[70.2365,62.8362,-3.9475],[47.2634,54.294,-27.4148],[28.7302,91.7311,-24.9726],[69.1676,6.5862,-12.7757],[28.7302,49.1003,-48.3596],[31.903,5.692,-47.822],[35.0758,-34.4329,-16.2809],[115.2841,48.6815,48.6841],[110.8428,28.4821,49.1762],[-19.1243,-69.0168,49.4201],[-38.2486,-66.2756,17.7762],[-111.0246,52.6046,46.2259],[-72.1133,35.4918,30.8714],[-66.192,80.898,55.3943],[-114.025,87.6733,58.9818],[-97.8045,116.561,73.9788],[-52.6089,30.3641,42.5561],[-16.7623,58.0109,58.0782],[-106.8814,31.9455,46.9133],[-108.6633,43.2332,46.3154],[-113.4846,38.6049,49.1215],[-101.2166,15.9822,46.3082],[-16.6605,-16.2883,93.6187],[-23.9269,-2.5103,86.7365],[-40.775,-10.2288,85.2764],[-61.1809,8.8142,76.9968],[-39.7195,-28.9271,88.9638],[-14.8446,-52.6096,140.113],[-15.2674,-62.32,129.688],[-47.4625,-68.6061,63.3697],[-35.6042,-71.758,81.0639],[-38.2486,-64.7302,38.9099],[-17.8021,-71.758,81.0639],[-12.8928,-36.7035,141.672],[-67.7668,-30.197,78.4178],[-122.118,-36.8894,35.025],[-109.284,-93.5899,27.8243],[-33.1807,101.852,25.3186],[-11.4565,-37.8994,150.722],[-70.2365,62.8362,-3.9475],[-28.7302,91.7311,-24.9726],[-47.2634,54.294,-27.4148],[-69.1676,6.5862,-12.7757],[-28.7302,49.1003,-48.3596],[-31.903,5.692,-47.822],[-35.0758,-34.4329,-16.2809],[-115.2841,48.6815,48.6841],[-110.8428,28.4821,49.1762]],"chunks":[{"color":[246,133,27],"faces":[[17,33,10],[17,18,34],[34,33,17],[10,6,17],[11,15,31],[31,18,11],[18,12,11],[14,16,40],[40,41,14],[59,5,35],[35,79,59],[67,63,77],[67,77,76],[76,68,67],[63,67,58],[64,68,75],[75,37,64],[68,64,66],[14,41,37],[37,15,14],[5,59,40],[40,16,5]]},{"color":[228,118,27],"faces":[[31,24,18],[6,5,16],[16,17,6],[24,32,33],[33,34,24],[5,4,35],[75,68,71],[58,67,40],[40,59,58],[71,76,77],[77,78,71]]},{"color":[118,61,22],"faces":[[0,1,2],[2,3,0],[4,5,2],[6,3,2],[2,5,6],[7,8,9],[10,3,6],[10,50,7],[7,3,10],[7,9,3],[49,0,9],[3,9,0],[53,54,55],[55,56,53],[57,56,55],[58,59,55],[55,54,58],[60,61,62],[63,58,54],[63,60,89],[60,63,54],[60,54,61],[88,61,53],[54,53,61],[2,1,4],[55,59,57]]},{"color":[22,22,22],"faces":[[36,15,37],[37,38,36],[31,39,22],[22,21,31],[31,15,36],[36,39,31],[75,69,26],[26,80,75],[75,80,38],[38,37,75],[38,80,39],[39,36,38],[39,80,26],[26,22,39]]},{"color":[215,193,179],"faces":[[21,20,24],[24,31,21],[69,71,70],[71,69,75]]},{"color":[192,173,158],"faces":[[19,20,21],[21,22,19],[20,19,23],[23,24,20],[23,25,24],[19,22,26],[26,27,19],[23,28,29],[23,29,30],[25,23,30],[29,51,52],[52,30,29],[27,26,69],[69,70,27],[70,71,72],[72,27,70],[72,71,73],[51,74,72],[52,51,72],[73,52,72],[19,27,74],[74,28,19],[51,29,28],[28,74,51],[74,27,72],[28,23,19]]},{"color":[205,97,22],"faces":[[24,34,18],[16,13,12],[12,17,16],[13,16,11],[71,68,76],[40,67,66],[66,65,40],[65,64,40]]},{"color":[35,52,71],"faces":[[11,12,13],[64,65,66]]},{"color":[228,117,31],"faces":[[14,15,11],[11,16,14],[17,12,18],[41,64,37],[67,68,66]]},{"color":[226,118,27],"faces":[[35,4,42],[4,1,42],[42,43,44],[44,35,42],[45,43,42],[42,10,45],[30,32,24],[24,25,30],[30,33,32],[33,30,10],[44,43,46],[43,45,47],[47,46,43],[48,47,45],[45,30,48],[30,45,10],[49,42,0],[8,7,42],[50,42,7],[50,10,42],[1,0,42],[42,9,8],[42,49,9],[64,41,40],[57,59,79],[79,81,57],[57,81,56],[82,79,35],[35,44,82],[81,79,82],[82,83,81],[84,63,81],[81,83,84],[44,46,85],[85,82,44],[52,73,71],[71,78,52],[52,78,77],[77,63,52],[82,85,83],[83,85,86],[86,84,83],[87,52,84],[84,86,87],[52,63,84],[88,53,81],[62,81,60],[89,60,81],[89,81,63],[56,81,53],[81,62,61],[81,61,88],[48,87,86],[86,47,48],[47,86,85],[85,46,47],[48,30,52],[52,87,48]]}]}},{}],3:[function(j,q,z){function createNode(t){return document.createElementNS(SVG_NS,t)}function setAttribute(t,e,n){t.setAttributeNS(null,e,n)}var B=j("gl-mat4/perspective"),multiply=j("gl-mat4/multiply"),lookAt=j("gl-mat4/lookAt"),invert=j("gl-mat4/invert"),rotate=j("gl-mat4/rotate"),transform=j("gl-vec3/transformMat4"),foxJSON=j("./fox.json"),SVG_NS="http://www.w3.org/2000/svg";q.exports=function(t){function e(t){var e=y.getBoundingClientRect();x.x=1-2*(t.x-e.left)/e.width,x.y=1-2*(t.y-e.top)/e.height}function n(t,e){this.svg=t,this.indices=e,this.zIndex=0}function r(t){for(var e=t[0],n=t[1],r=t[2],i=t[3],o=t[4],a=t[5],l=t[6],u=t[7],s=t[8],f=t[9],h=t[10],c=t[11],d=t[12],w=t[13],v=t[14],g=t[15],m=0;m<F;++m){var p=N[3*m],A=N[3*m+1],y=N[3*m+2],x=p*i+A*u+y*c+g;M[3*m]=(p*e+A*o+y*s+d)/x,M[3*m+1]=(p*n+A*a+y*f+w)/x,M[3*m+2]=(p*r+A*l+y*h+v)/x}}function i(t,e){return e.zIndex-t.zIndex}function o(){var t,e=y.getBoundingClientRect(),n=e.width,r=e.height;for(b.length=0,t=0;t<S.length;++t){var o=S[t],a=o.indices,l=a[0],u=a[1],s=a[2],f=M[3*l],h=M[3*l+1],c=M[3*u],d=M[3*u+1],w=M[3*s];if(!((c-f)*(M[3*s+1]-h)-(d-h)*(w-f)<0)){for(var v=[],g=-1/0,m=1/0,p=o.svg,A=0;A<3;++A){var x=a[A];v.push(.5*n*(1-M[3*x])+","+.5*r*(1-M[3*x+1]));var F=M[3*x+2];g=Math.max(g,F),m=Math.min(m,F)}o.zIndex=g+.25*m;var N=v.join(" ");-1===N.indexOf("NaN")&&setAttribute(p,"points",N),b.push(o)}}for(b.sort(i),y.innerHTML="",t=0;t<b.length;++t)y.appendChild(b[t].svg)}function a(){v=!1}function l(){v=!0}function u(t){c=t}function s(t){d=t}function f(){if(v){window.requestAnimationFrame(f);var t=1-m;y.getBoundingClientRect();g[0]=t*g[0]+m*x.x,g[1]=t*g[1]+m*x.y+.085;r(k()),o(),a()}}var h=t||{},c=!!h.followMouse,d=!!h.followMotion,w=!!h.slowDrift,v=!0,g=[0,0],m=.3,p=400,A=400,y=createNode("svg"),x={x:0,y:0},F=foxJSON.positions.length,N=new Float32Array(3*F),M=new Float32Array(3*F),b=[];h.pxNotRatio||(p=window.innerWidth*(h.width||.25)|0,A=0|(window.innerHeight*h.height||p),"minWidth"in h&&p<h.minWidth&&(p=h.minWidth,A=p)),setAttribute(y,"width",p+"px"),setAttribute(y,"height",p+"px"),document.body.appendChild(y),function(){for(var t=foxJSON.positions,e=0,n=0;n<t.length;++n)for(var r=t[n],i=0;i<3;++i)N[e++]=r[i]}();var S=function(){for(var t=[],e=0;e<foxJSON.chunks.length;++e)for(var r=foxJSON.chunks[e],i="rgb("+r.color+")",o=r.faces,a=0;a<o.length;++a){var l=o[a],u=createNode("polygon");setAttribute(u,"fill",i),setAttribute(u,"stroke",i),setAttribute(u,"points","0,0, 10,0, 0,10"),y.appendChild(u),t.push(new n(u,l))}return t}(),k=function(){var t=new Float32Array(3),e=new Float32Array([0,1,0]),n=new Float32Array(16),r=new Float32Array(16),i=lookAt(new Float32Array(16),new Float32Array([0,0,400]),t,e),o=invert(new Float32Array(16),i),a=new Float32Array(16),l=new Float32Array(3),u=new Float32Array(16),s=new Float32Array([1,0,0]),f=new Float32Array([0,1,0]),h=new Float32Array([0,0,1]);return function(){var c=y.getBoundingClientRect(),d=c.width,v=c.height;if(B(n,Math.PI/4,d/v,100,1e3),invert(a,n),l[0]=g[0],l[1]=g[1],l[2]=1.2,transform(l,l,a),transform(l,l,o),lookAt(r,t,l,e),w){var m=Date.now()/1e3;rotate(r,r,.1+.2*Math.sin(m/3),s),rotate(r,r,.03*Math.sin(m/2)-.1,h),rotate(r,r,.5+.2*Math.sin(m/3),f)}return multiply(u,n,i),multiply(u,u,r),u}}();return window.addEventListener("mousemove",function(t){v||l(),c&&(e({x:t.clientX,y:t.clientY}),f())}),window.addEventListener("deviceorientation",function(t){if(v||l(),d){const n=event.gamma,r=event.beta;yOffset=-300,acceleration=10,e({x:200+n*acceleration,y:yOffset+r*acceleration}),f()}}),f(),{container:y,lookAt:e,setFollowMouse:u,setFollowMotion:s,stopAnimation:a,startAnimation:l}}},{"./fox.json":2,"gl-mat4/invert":6,"gl-mat4/lookAt":7,"gl-mat4/multiply":8,"gl-mat4/perspective":9,"gl-mat4/rotate":10,"gl-vec3/transformMat4":11}],4:[function(a,b,c){"use strict";function format(e){var t=(/mac os x/i.test(navigator.userAgent)?"⌘":"Ctrl")+"+C";return e.replace(/#{\s*key\s*}/g,t)}var d=a("toggle-selection"),defaultMessage="Copy to clipboard: #{key}, Enter";b.exports=copy},{"toggle-selection":12}],5:[function(a,b,c){function identity(t){return t[0]=1,t[1]=0,t[2]=0,t[3]=0,t[4]=0,t[5]=1,t[6]=0,t[7]=0,t[8]=0,t[9]=0,t[10]=1,t[11]=0,t[12]=0,t[13]=0,t[14]=0,t[15]=1,t}b.exports=identity},{}],6:[function(F,G,H){function invert(n,r){var e=r[0],t=r[1],u=r[2],i=r[3],l=r[4],o=r[5],v=r[6],a=r[7],c=r[8],d=r[9],f=r[10],m=r[11],p=r[12],s=r[13],x=r[14],b=r[15],g=e*o-t*l,h=e*v-u*l,j=e*a-i*l,k=t*v-u*o,q=t*a-i*o,w=u*a-i*v,y=c*s-d*p,z=c*x-f*p,A=c*b-m*p,B=d*x-f*s,C=d*b-m*s,D=f*b-m*x,E=g*D-h*C+j*B+k*A-q*z+w*y;return E?(E=1/E,n[0]=(o*D-v*C+a*B)*E,n[1]=(u*C-t*D-i*B)*E,n[2]=(s*w-x*q+b*k)*E,n[3]=(f*q-d*w-m*k)*E,n[4]=(v*A-l*D-a*z)*E,n[5]=(e*D-u*A+i*z)*E,n[6]=(x*j-p*w-b*h)*E,n[7]=(c*w-f*j+m*h)*E,n[8]=(l*C-o*A+a*y)*E,n[9]=(t*A-e*C-i*y)*E,n[10]=(p*q-s*j+b*g)*E,n[11]=(d*j-c*q-m*g)*E,n[12]=(o*z-l*B-v*y)*E,n[13]=(e*B-t*z+u*y)*E,n[14]=(s*h-p*k-x*g)*E,n[15]=(c*k-d*h+f*g)*E,n):null}G.exports=invert},{}],7:[function(g,j,w){function lookAt(t,a,e,r){var i,o,s,h,n,M,d,q,u,b,l=a[0],y=a[1],k=a[2],v=r[0],A=r[1],c=r[2],f=e[0],m=e[1],p=e[2];return Math.abs(l-f)<1e-6&&Math.abs(y-m)<1e-6&&Math.abs(k-p)<1e-6?x(t):(d=l-f,q=y-m,u=k-p,b=1/Math.sqrt(d*d+q*q+u*u),d*=b,q*=b,u*=b,i=A*u-c*q,o=c*d-v*u,s=v*q-A*d,b=Math.sqrt(i*i+o*o+s*s),b?(b=1/b,i*=b,o*=b,s*=b):(i=0,o=0,s=0),h=q*s-u*o,n=u*i-d*s,M=d*o-q*i,b=Math.sqrt(h*h+n*n+M*M),b?(b=1/b,h*=b,n*=b,M*=b):(h=0,n=0,M=0),t[0]=i,t[1]=h,t[2]=d,t[3]=0,t[4]=o,t[5]=n,t[6]=q,t[7]=0,t[8]=s,t[9]=M,t[10]=u,t[11]=0,t[12]=-(i*l+o*y+s*k),t[13]=-(h*l+n*y+M*k),t[14]=-(d*l+q*y+u*k),t[15]=1,t)}var x=g("./identity");j.exports=lookAt},{"./identity":5}],8:[function(q,w,z){function multiply(l,t,u){var r=t[0],e=t[1],i=t[2],m=t[3],n=t[4],o=t[5],p=t[6],y=t[7],a=t[8],c=t[9],d=t[10],f=t[11],s=t[12],v=t[13],x=t[14],b=t[15],g=u[0],h=u[1],j=u[2],k=u[3];return l[0]=g*r+h*n+j*a+k*s,l[1]=g*e+h*o+j*c+k*v,l[2]=g*i+h*p+j*d+k*x,l[3]=g*m+h*y+j*f+k*b,g=u[4],h=u[5],j=u[6],k=u[7],l[4]=g*r+h*n+j*a+k*s,l[5]=g*e+h*o+j*c+k*v,l[6]=g*i+h*p+j*d+k*x,l[7]=g*m+h*y+j*f+k*b,g=u[8],h=u[9],j=u[10],k=u[11],l[8]=g*r+h*n+j*a+k*s,l[9]=g*e+h*o+j*c+k*v,l[10]=g*i+h*p+j*d+k*x,l[11]=g*m+h*y+j*f+k*b,g=u[12],h=u[13],j=u[14],k=u[15],l[12]=g*r+h*n+j*a+k*s,l[13]=g*e+h*o+j*c+k*v,l[14]=g*i+h*p+j*d+k*x,l[15]=g*m+h*y+j*f+k*b,l}w.exports=multiply},{}],9:[function(b,d,f){function perspective(e,t,r,p,n){var a=1/Math.tan(t/2),c=1/(p-n);return e[0]=a/r,e[1]=0,e[2]=0,e[3]=0,e[4]=0,e[5]=a,e[6]=0,e[7]=0,e[8]=0,e[9]=0,e[10]=(n+p)*c,e[11]=-1,e[12]=0,e[13]=0,e[14]=2*n*p*c,e[15]=0,e}d.exports=perspective},{}],10:[function(F,G,H){function rotate(t,a,r,e){var o,n,s,h,u,M,l,c,i,b,d,f,m,p,q,v,x,g,j,k,w,y,z,A,B=e[0],C=e[1],D=e[2],E=Math.sqrt(B*B+C*C+D*D);return Math.abs(E)<1e-6?null:(E=1/E,B*=E,C*=E,D*=E,o=Math.sin(r),n=Math.cos(r),s=1-n,h=a[0],u=a[1],M=a[2],l=a[3],c=a[4],i=a[5],b=a[6],d=a[7],f=a[8],m=a[9],p=a[10],q=a[11],v=B*B*s+n,x=C*B*s+D*o,g=D*B*s-C*o,j=B*C*s-D*o,k=C*C*s+n,w=D*C*s+B*o,y=B*D*s+C*o,z=C*D*s-B*o,A=D*D*s+n,t[0]=h*v+c*x+f*g,t[1]=u*v+i*x+m*g,t[2]=M*v+b*x+p*g,t[3]=l*v+d*x+q*g,t[4]=h*j+c*k+f*w,t[5]=u*j+i*k+m*w,t[6]=M*j+b*k+p*w,t[7]=l*j+d*k+q*w,t[8]=h*y+c*z+f*A,t[9]=u*y+i*z+m*A,t[10]=M*y+b*z+p*A,t[11]=l*y+d*z+q*A,a!==t&&(t[12]=a[12],t[13]=a[13],t[14]=a[14],t[15]=a[15]),t)}G.exports=rotate},{}],11:[function(b,c,d){function transformMat4(r,t,a){var n=t[0],o=t[1],e=t[2],f=a[3]*n+a[7]*o+a[11]*e+a[15];return f=f||1,r[0]=(a[0]*n+a[4]*o+a[8]*e+a[12])/f,r[1]=(a[1]*n+a[5]*o+a[9]*e+a[13])/f,r[2]=(a[2]*n+a[6]*o+a[10]*e+a[14])/f,r}c.exports=transformMat4},{}],12:[function(b,c,d){c.exports=function(){var e=document.getSelection();if(!e.rangeCount)return function(){};for(var n=document.activeElement,t=[],a=0;a<e.rangeCount;a++)t.push(e.getRangeAt(a));switch(n.tagName.toUpperCase()){case"INPUT":case"TEXTAREA":n.blur();break;default:n=null}return e.removeAllRanges(),function(){"Caret"===e.type&&e.removeAllRanges(),e.rangeCount||t.forEach(function(n){e.addRange(n)}),n&&n.focus()}}},{}]},{},[1]);
+        </script>
+        </div>
+      </div>
+		</Container>
+	</FullpageSection>
+  <!--
+	<FullpageSection {slides} class="bg-info" arrows>
+		<FullpageSlide center>
+			<Container class="text-center">
+				<Row>
+					<Col>
+						<h1>Slides</h1>
+						<p>
+							There is also component for slides as you can see.
+							Try to drag/swipe right or left, also you can use arrows.
+						</p>
+					</Col>
+				</Row>
+			</Container>
+		</FullpageSlide>
+		<FullpageSlide class="bg-danger" center>
+			<Container class="text-center">
+				<Row>
+					<Col>
+						<h1>Another slide</h1>
+						<p>
+							You can style every individual slide, notice background change.
+						</p>
+					</Col>
+				</Row>
+			</Container>
+		</FullpageSlide>
+		<FullpageSlide class="bg-success" center>
+			<Container class="text-center">
+				<Row>
+					<Col>
+						<h1>Embeds</h1>
+						<p>
+							svelte-fullpage supports also embeds and iframes, scroll down to see example, you will see
+							page but loaded using embed. Scrolling on embaded page is enabled, but also fulpage
+							scrolling is still working, try to scroll hovering over fullpage section indicator (grey dots).
+						</p>
+					</Col>
+				</Row>
+			</Container>
+		</FullpageSlide>
+	</FullpageSection>-->
+
+
+</Fullpage>
 
 <style type="text/scss">
-  .constraint{padding-top:6rem;margin:auto;width:1024px;max-width:calc(100% - 3rem);padding-left:1.5rem;padding-right:1.5rem;}
-  .fw{}
-  @keyframes glow{
-    0%{		text-shadow: 2px 2px 2px rgba(0, 162, 255, 0.5), 2px -2px 5px rgba(255, 208, 0, 0.5), -2px 2px 2px  rgba(255, 0, 0, 0.5);
-}   50%{		text-shadow: 2px -2px 5px rgba(0, 162, 255, 0.5), -2px 2px 0px rgba(255, 208, 0, 0.5), 2px -2px 5px  rgba(255, 0, 0, 0.5);
-}   100%{		text-shadow: 2px 2px 2px rgba(0, 162, 255, 0.5), 2px -2px 5px rgba(255, 208, 0, 0.5), -2px 2px 2px  rgba(255, 0, 0, 0.5);
-}
-  }
-  .box-img{width: 30%;      margin:2rem;
-}
+.img-effect{display: flex;height:512px;width:512px;position:relative;margin:auto;}
+ .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
+}.imgbox{max-height:504px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+.description{text-align:left;margin-left:8rem;width:512px;}
+.half{width:50%;}
+.pagenumber{}
+.nobox{width:calc(100vw - 18rem);}
+.underline{height:1px;margin-bottom:1rem;background-color:white;}
+.button-padding{padding:1rem;margin-bottom:2rem;margin-right:2rem;}
+.row{display:flex;flex-flow:row;}
+.nft-card{background-color:#111;width:calc(256px + 2rem);height:512px;transition:all 0.2s ease;}
+.nft-card-inner{padding-top:1.75rem;background-color:black;width:320px;height:512px;transition:all 0.2s ease;}
+.nft-card-inner > img {border-radius:256px;}
+.nft-card-inner:hover{background-color:#ee0530;}
 @media screen and (max-width:900px){
-  .box3 {
-      border-radius: 20px;
-      margin:2rem;
-      color:#333;
-      width: calc(100% - 3rem)!important;
-      min-height:280px;
-      text-align:left;
-        height: auto;
-       
-      /*animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;*/
-      /* animation-fill-mode: forwards; */
-    }
-    .attribute-wrapper{width: 320px!important;}
-  .attribute-list{
-    position:relative;
-    z-index:2;
-    margin-left:0px!important;
-    margin-top:156px!important;
-    padding:1rem;
-    padding-left:1.5rem!important;
-    border-left:1px solid black;
-    border-bottom:1px solid black;
-    border-bottom-left-radius:1rem;
-    padding-bottom:0px!important;
-    padding-top:128px!important;
-    height: min-content;
-  }
-  .image-text-row{
-    display:flex;
-    flex-flow:column!important;
-    justify-content:space-between;
-  }
-  .image-text-row > img{margin:auto;margin-top:2rem;}
-  .image-text-row:nth-child(odd){flex-flow:wrap-reverse!important;}
-}
-  .buttonicon{margin-left:1.5rem;height:20px;width:20px;filter:invert(1);}
-  .hero-h1{margin-top:unset;animation:glow 5s ease infinite;font-size: 7vw; letter-spacing:4px;margin-bottom:unset;}
-  .hero{z-index:5;width:1024px;margin:auto;position:relative;}
-  .stringhero{position:absolute;left:0px;top:0px;overflow:hidden;width:100vw;height:100%;min-height:100vh;}
-  .first{display:flex;height:100vh;margin-top: calc(-100px - 2rem);}
-  .second{background:#f0f0f0;margin:unset;}
-  .third{background:#BABABA;}
-  .fourth{background:#222;}
-  .box > h1{margin:unset!important;text-align:left;color:#555;}
-  .box > p{text-align:left;color:#555;
-  }
-  .attribute-image > img{border-radius: 2rem;
-overflow: hidden;}
-  .attribute-list-wrapper{
-    display:flex;
-    flex-flow:wrap;
-    justify-content:center;
-    padding-bottom:6rem;}
-  .attribute-wrapper{
-    display: flex;
-    width:512px;
-    min-height:300px;
-    text-align:left;
-    margin:1rem 0rem;
-  }
-  .attribute-image{
-    pointer-events:none;
-    position:absolute;
-    z-index:1;
-    padding:1rem;
-    width:calc(256px + 2rem);
-    display:flex;
-    flex-flow:wrap;
-    justify-content:center;
-    height:calc(256px + 2rem);
-    background:#0a0a0a;
-    border-radius:256px;
-    overflow:hidden;
-  }
-  .attribute-list{
-    position:relative;
-    z-index:2;
-    margin-left:128px;
-    padding:1rem;
-    height: min-content;
-  }
-  .image-text-row{
-    display:flex;
-    flex-flow:row;
-    justify-content:space-between;
-  }
-  .image-text-row > img{filter:invert(0.2);}
-  .button-row{display:flex;flex-flow:wrap;justify-content: center;}
-  button > img{transition:all 0.2s ease;}
-  button{font-weight:400;margin:1rem; min-width:150px;}
-  button:hover > img{filter:invert(0);}
-.nav-links{display:flex;flex-flow:row;justify-content:space-around;}
-.nav-links > a{margin:1rem;transition:transform 0.2s ease;}
-.icon-box > a{margin:1rem;transition:transform 0.2s ease;}
-.nav-links > a:hover{transform:scale(1.1);}
-.icon-box > a:hover{transform:scale(1.1);}
-  .herobottom{position: absolute;
-bottom: -10px;
-width: 105vw;
-z-index: 8;
-left: -3vw;} 
-.arrowtop{position: relative;
-top: -10px;
-width: 105vw;
-z-index: 8;
-left: -5vw;}
-    .container {padding-bottom:6rem;padding-top:3rem;
-      background: #f0f0f0;
-      box-sizing: border-box;
-      display: flex;
-      flex-flow:wrap;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      margin:auto;
-      max-width:1024px;
-      height: auto;
-    }
-    section{min-height:50vh;}
-    .box {
-      border-radius: 20px;
-      padding:2rem;
-      margin:2rem;
-      color:#333;
-      width: 480px;
-      min-height:280px;
-        height: auto;
-        background: #fafafa;
-        box-shadow:  40px 40px 40px #cccccc,
-                     0 0 0 #ffffff,
-                     0 0 0 #cccccc inset,
-                     2px 2px 2px #ffffff inset;
-      /*animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;*/
-      /* animation-fill-mode: forwards; */
-    }.box2 {
-      border-radius: 20px;
-      margin:2rem;
-      color:#333;
-      width: 100%;
-      min-height:512px;
-      text-align:left;
-        height: auto;
-       
-      /*animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;*/
-      /* animation-fill-mode: forwards; */
-    }.box3 {
-      border-radius: 20px;
-      margin:2rem;
-      color:#333;
-      width: 70%;
-      min-height:280px;
-      text-align:left;
-        height: auto;
-       
-      /*animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;*/
-      /* animation-fill-mode: forwards; */
-    }
 
-    @keyframes anime {
-      0% {
-        width: 60px;
-        height: 60px;
-        background: #f0f0f0;
-        box-shadow:  0 0 0 #cccccc,
-                     0 0 0 #ffffff,
-                      10px 10px 10px #cccccc inset,
-                      -10px -10px 10px #ffffff inset;
-      }
-      25% {
-        width: 60px;
-        height: 60px;
-        background: #f8f8f8;
-        box-shadow:  10px 10px 10px #cccccc,
-                     10px 10px 10px #ffffff,
-                     0 0 0 #cccccc inset,
-                     0 0 0 #ffffff inset;
-      }
-      50% {
-        width: 60px;
-        height: 240px;
-        background: #f8f8f8;
-        box-shadow:  10px 10px 10px #cccccc,
-                     10px 10px 10px #ffffff,
-                     0 0 0 #cccccc inset,
-                     0 0 0 #ffffff inset;
-      }
-      100% {
-        width: 480px;
-        height: 240px;
-        background: #fafafa;
-        box-shadow:  40px 40px 40px #cccccc,
-                     0 0 0 #ffffff,
-                     0 0 0 #cccccc inset,
-                     2px 2px 2px #ffffff inset;
-      }
-      }
+    }
 </style>

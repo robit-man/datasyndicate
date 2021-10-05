@@ -38,13 +38,23 @@
 	<header>
         <div class="nav-row">
           <div class="icon-box">
+            <div class="dot-row">
+            <div class="icon-dot"></div>
+            <div class="icon-dot"></div>
+            <div class="icon-dot"></div>
           </div>
-          
+          <div class="dot-row">
+            <div class="icon-dot"></div>
+            <div class="icon-dot"></div>
+          </div>
+        </div>
+          <p style="font-weight:100;font-size: 2rem;line-height:2rem;">GEOMETRIC<b style="font-weight:900;">FORMS</b></p>
         </div>
       </header>
+
+      
     <Router url="{url}">
         
-    
         <Route path="/"><Home /></Route>
         <Route path="/mint" component={Mint}><Mint /></Route>
         <Route path="/mint"><Mint /></Route>
@@ -55,8 +65,7 @@
     </Router>
 
     <script type="text/javascript" src="/script.js"></script>
-    <footer style="">
-    </footer>
+
 </div>
 <style>
 	.main {
@@ -65,12 +74,17 @@
 		margin: 0 auto;
 	}
     .nav-row{
-  position: relative;
-  height:100px;top:0px;width:calc(100vw - 4rem);
-  display:flex;
-  flex-flow:row;
-  justify-content: space-between;
-  margin:auto;padding:1rem 2rem;
+      position: relative;
+      height:100px;top:0px;
+      width:calc(100vw - 4rem);
+      display:flex;
+      flex-flow:row;
+      justify-content: center;
+      margin:auto;padding:1rem 2rem;
+}
+.icon-box{
+  display:flex;flex-flow:column;
+  position:fixed;left:4rem;top:2rem;
 }
 .wrapper{    
   position: relative;
@@ -83,13 +97,31 @@
 button{margin:1rem;}
 header{z-index:5;position:relative;}
 @media only screen and (max-width: 900px) {
-    .pepebottom{width:100vw;text-align:center;font-size:3rem;}
+    .pepebottom{
+      width:100vw;
+      text-align:center;
+      font-size:3rem;
+    }
 }
-footer{position:relative;display:flex;flex-flow:row;justify-content:center;bottom:0px;left:0px;width:100vw;height:auto;}
-
+footer{
+  position:relative;
+  display:flex;
+  flex-flow:row;
+  justify-content:center;
+  bottom:0px;
+  left:0px;
+  width:100vw;
+  height:auto;
+}
+.icon-dot{
+  height:4px;width:4px;border-radius:2px;margin:0.5rem;background:white;
+}
+.dot-row{display:flex;flex-flow:row;}
 
 .mint{
     transition: transform 0.2s ease;
 }
-.mint:hover{transform:scale(1.1);}
+.mint:hover{
+  transform:scale(1.1);
+}
 </style>
