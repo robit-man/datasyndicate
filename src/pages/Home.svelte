@@ -54,9 +54,9 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
-              <h5 style="margin:unset!important;">COLLECTION : 100 UNIQUE FORMS</h5>
-              <p style="font-size:5rem;font-weight:100;margin:unset!important;">GEOMETRIC</p>
-              <p style="font-size:5rem;font-weight:900;color:#ee0530;margin:unset!important;"><b>FORMS</b></p>
+              <h5 style="margin:unset;margin-bottom:1rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
+              <p style="font-size:5rem;font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
+              <p style="font-size:5rem;font-weight:900;color:#ee0530;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
             </div>
             </Col>
               
