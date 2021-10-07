@@ -104,7 +104,7 @@ import {
               <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>GEOMETRY</b></p>
               <p>GEOMETRIC FORMS is a collection of 100 unique FORM NFTs - a digital version of generative geometry and post processed colour found in mathematics and art.
                 <br><br>
-                With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on thje Ethereum blockchain for immutable history and decentralized ownership.
+                With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
               </p>
             </div>
             </Col>
@@ -290,6 +290,7 @@ import {
 </Fullpage>
 
 <style type="text/scss">
+.pagenumber > .bigfont{margin: unset !important;}
 .container-child-wrapper{width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;}
 .img-effect{display: flex;height:512px;width:512px;position:relative;margin:auto;}
 .img-effect > img{height:250px;width:250px;}
@@ -396,4 +397,3 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 
 }
 </style>
-2
