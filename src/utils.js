@@ -10,7 +10,8 @@ import {
     etherLoading,
     balances,
     totalSupply,
-    maxSupply
+    maxSupply,
+    justMinted
     } from './store.js';
 import { abi } from './abis/SpacePepe.json';
 import { get } from 'svelte/store'
@@ -52,13 +53,13 @@ export async function initProvider(app, reconnect = false) {
     resp = await (await (resp).json())
     
     nfts.set(resp);
-    console.log(resp);
+    
     app = app;
     total = parseInt(total.toString())
     var iterate = [...Array(total).keys()]
     var bals = [];
     
-    var each = iterate.forEach( async i => {
+    iterate.forEach( async i => {
         var owner
         try {
             owner = await nftContract.ownerOf(i+1)
@@ -89,7 +90,6 @@ export async function mintPepe() {
     try {
         const resp = await nftContract.mint({ value: ethers.utils.parseEther('0.5') });
         etherLoading.set(true);
-
         await resp.wait().then(
             receipt => {
                 console.log(receipt);
@@ -137,8 +137,8 @@ function onDisconnect() {
 
 export async function subscribeToTransferEvent(provider) {
     var nftContract = get(contract);
-
-    nftContract.on("Transfer", async (to, amount, from) => {
+    var address = get(address);
+    nftContract.on("Transfer", async (from, to, nftid) => {
         var nftContract = get(contract);
         var total = await nftContract.currentTokenId();
         totalSupply.set(total)
@@ -147,6 +147,11 @@ export async function subscribeToTransferEvent(provider) {
             body: JSON.stringify({})
         })
         resp = await (await (resp).json())
-        nfts.set(resp);        
+        nfts.set(resp);
+        if(from == ethers.constants.AddressZero &&
+            to == address)
+        {
+            justMinted.set('/forms/' + resp[nftid-1]['image'])
+        }
     });
   }
