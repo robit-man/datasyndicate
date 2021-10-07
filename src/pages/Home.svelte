@@ -47,7 +47,7 @@ import {
           <div class="row ">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
-              <p style="font-size:5rem;font-weight:400;margin:unset;">01</p>
+              <p class="bigfont" style="font-weight:400;margin:unset;">01</p>
               <div class="underline"></div>
               <div class="page-name">Home</div>
             </div>
@@ -55,8 +55,8 @@ import {
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
               <h5 style="margin:unset;margin-bottom:1rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
-              <p style="font-size:5rem;font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
-              <p style="font-size:5rem;font-weight:900;color:#ee0530;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
+              <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
+              <p class="bigfont" style="font-weight:900;color:#ee0530;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
             </div>
             </Col>
               
@@ -321,6 +321,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   display:flex;
   flex-flow:column;
   justify-content:center;}
+  .bigfont{font-size:5rem;}
   .geometry-container{width:800px;height:800px;border-radius:400px;margin:auto;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
   .iframe-wrap{padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
@@ -341,6 +342,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;}
     .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
     .second-container{padding:2rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
+    .bigfont{font-size:3rem;line-height: 3rem!important;}
 
   .container-child-wrapper{
     width:100vw;
@@ -357,7 +359,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   padding-top:2rem;
   padding-bottom:2rem;
   width:auto;
-  height:calc(100vh - 4rem);
+  height:50%;
   display:flex;
   flex-flow:column;
   justify-content:center;}
@@ -365,7 +367,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 
     .rotate-title{margin-left:2rem;transform:rotate(0deg);text-align:left;width:100vw; }
 
-    .description{text-align:left;margin-left:2rem;width:calc(100vw - 8rem);padding-right:2rem;}
+    .description{text-align:left;margin-left:2rem;width:auto;padding-right:2rem;}
 
     .hero-title{padding-left: 2rem;padding-top:2rem;padding-bottom:2rem;width:100vw;height:30%;display:flex;flex-flow:column;justify-content:center;background:#333!important;}
 
