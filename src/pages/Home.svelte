@@ -376,7 +376,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 
     .rotate-title{margin-left:0rem;transform:rotate(0deg);text-align:left;width: max-content; }
 
-    .description{text-align:left;margin-left:0px;width:auto;padding-right:0px;}
+    .description{max-width: 512px;text-align:left;margin-left:0px;width:auto;padding-right:0px;}
     .nobox{width:100vw;}
 
     .hero-title{    margin-top: -132px;
