@@ -42,10 +42,10 @@ import {
 <Fullpage bind:activeSection arrows drag> 
 	<FullpageSection style="background:#111!important;"  center>
 		<Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
-				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:512px;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;background:#333!important;" >
+      <div class="container-child-wrapper" >
+				<div class="hero-title" >
           <div class="row ">
-            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
               <p style="font-size:5rem;font-weight:400;margin:unset;">01</p>
               <div class="underline"></div>
@@ -62,8 +62,8 @@ import {
               
           </div>
         </div>
-        <div style="padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;">
-          <iframe src="/strings.html" style="width:800px;height:800px;border-radius:400px;margin:auto;" frameborder="0"></iframe>
+        <div class="iframe-wrap">
+          <iframe src="/strings.html" class="geometry-container" frameborder="0"></iframe>
           <button on:click={mintSection} class="button-padding"> SKIP TO MINTING</button>
 
         </div>
@@ -73,10 +73,10 @@ import {
   
 	<FullpageSection style="background:#ee0530!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
-				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+      <div class="container-child-wrapper" >
+				<div class="container-child-wrapper-padding" >
           <div class="row half">
-            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
               <p style="font-size:5rem;font-weight:400;margin:unset;">02</p>
               <div class="underline"></div>
@@ -96,7 +96,7 @@ import {
               
           </div>
         </div>
-        <div style="padding:4rem 8rem; width:50%;display: flex;justify-content: center;flex-flow:column;">
+        <div class="second-container">
           <div class="img-effect">
             <img transition:fade src="/imgs/forms/line-000363.png" style="z-index:2;position:relative;" alt="">
             <div class="imgbox"></div>
@@ -107,10 +107,10 @@ import {
 	</FullpageSection>
 	<FullpageSection style="background:#111!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
-				<div style="padding-right: 4rem;padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+      <div class="container-child-wrapper" >
+				<div class="slider-wrap" >
           <div class="row half">
-            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
               <p style="font-size:5rem;font-weight:400;margin:unset;">03</p>
               <div class="underline"></div>
@@ -168,10 +168,10 @@ import {
 	</FullpageSection>
 	<FullpageSection style="background:#ee0530!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
-				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+      <div class="container-child-wrapper" >
+				<div class="container-child-wrapper-padding" >
           <div class="row half">
-            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
               <p style="font-size:5rem;font-weight:400;margin:unset;">04</p>
               <div class="underline"></div>
@@ -197,7 +197,7 @@ import {
               
           </div>
         </div>
-        <div style="padding:4rem 2rem; width:50%;display: flex;justify-content: center;flex-flow:column;">
+        <div style="padding:4rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;">
           <div transition:slide class="description">
             <p style="font-size:3rem;font-weight:100;margin:unset!important;">PURCHASING</p>
             <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
@@ -212,10 +212,10 @@ import {
 	</FullpageSection>
 	<FullpageSection id="mint" style="background:#111!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div style="width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;" >
-				<div style="padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;" >
+      <div class="container-child-wrapper" >
+				<div class="container-child-wrapper-padding" >
           <div class="row half">
-            <Col style="display:flex;flex-flow:column;justify-content:center;width:50%;">
+            <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
               <p style="font-size:5rem;font-weight:400;margin:unset;">05</p>
               <div class="underline"></div>
@@ -241,8 +241,8 @@ import {
               
           </div>
         </div>
-        <div style="padding:4rem 8rem; width:50%;display: flex;justify-content: center;flex-flow:column;">
-      <iframe src="/metamask.html" style="overflow:hidden;height:512px;width:512px;border:unset;" frameborder="0"></iframe>
+        <div class="second-container">
+      <iframe src="/metamask.html" class="metamask-container" frameborder="0"></iframe>
         </div>
       </div>
 		</Container>
@@ -294,21 +294,83 @@ import {
 </Fullpage>
 
 <style type="text/scss">
+.container-child-wrapper{width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;}
 .img-effect{display: flex;height:512px;width:512px;position:relative;margin:auto;}
  .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
 }.imgbox{max-height:504px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
 .description{text-align:left;margin-left:8rem;width:512px;}
-.half{width:50%;}
+.half{width:auto;}
+.hero-title{padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:512px;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;background:#333!important;}
 .logo-container-2{height:512px;width:512px;}
 .nobox{width:calc(100vw - 18rem);}
 .underline{height:1px;margin-bottom:1rem;background-color:white;}
 .button-padding{padding:1rem;margin-bottom:2rem;margin-right:2rem;}
 .row{display:flex;flex-flow:row;}
-.nft-card{background-color:#111;width:calc(256px + 2rem);height:512px;transition:all 0.2s ease;}
+.nft-card{display: flex;
+flex-flow: row;
+justify-content: center;background-color:#111;width:calc(256px + 2rem);height:512px;transition:all 0.2s ease;}
 .nft-card-inner{padding-top:1.75rem;background-color:black;width:320px;height:512px;transition:all 0.2s ease;}
 .nft-card-inner > img {border-radius:256px;}
 .nft-card-inner:hover{background-color:#ee0530;}
+.container-child-wrapper-padding{
+  padding-left: 4rem;
+  padding-top:4rem;
+  padding-bottom:4rem;
+  width:auto;
+  height:calc(100vh - 8rem);
+  display:flex;
+  flex-flow:column;
+  justify-content:center;}
+  .geometry-container{width:800px;height:800px;border-radius:400px;margin:auto;}
+  .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
+  .iframe-wrap{padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
+  .metamask-container{overflow:hidden;height:512px;width:512px;border:unset;}
+  .second-container{padding:4rem 8rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
+  .slider-wrap{padding-right: 4rem;padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;}
+@media screen and (max-width:1600px){
+  .slider-wrap{
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-top:4rem;
+    padding-bottom:4rem;
+    width:auto;
+    height:calc(100vh - 8rem);
+    display:flex;
+    flex-flow:column;
+    justify-content:center;}
+    .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;}
+    .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+    .second-container{padding:2rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
+
+  .container-child-wrapper{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-flow:column;
+    justify-content:flex-start;}   
+ 
+    .iframe-wrap{padding:2rem 2rem; width:calc(100% - 4rem);display: flex;flex-flow:column;justify-content: flex-end;height:70%;}
+    .geometry-container{width:400px;height:400px;border-radius:400px;margin:auto;}
+    .svelte-fp-indicator{width:4rem!important;}
+    .container-child-wrapper-padding{
+  padding-left: 2rem;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  width:auto;
+  height:calc(100vh - 4rem);
+  display:flex;
+  flex-flow:column;
+  justify-content:center;}
+  .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;height:100vh;}
+
+    .rotate-title{margin-left:2rem;transform:rotate(0deg);text-align:left;width:100vw; }
+
+    .description{text-align:left;margin-left:2rem;width:calc(100vw - 8rem);padding-right:2rem;}
+
+    .hero-title{padding-left: 2rem;padding-top:2rem;padding-bottom:2rem;width:100vw;height:30%;display:flex;flex-flow:column;justify-content:center;background:#333!important;}
+
+}
 @media screen and (max-width:900px){
 
-    }
+}
 </style>

@@ -48,7 +48,7 @@
             <div class="icon-dot"></div>
           </div>
         </div>
-          <p style="font-weight:100;font-size: 2rem;line-height:2rem;">GEOMETRIC<b style="font-weight:900;">FORMS</b></p>
+          <p style="margin: 1rem;font-weight:100;font-size: 2rem;line-height:2rem;">GEOMETRIC<b style="font-weight:900;">FORMS</b></p>
         </div>
       </header>
 
@@ -96,12 +96,16 @@
 }
 button{margin:1rem;}
 header{z-index:5;position:relative;}
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1600px) {
     .pepebottom{
       width:100vw;
       text-align:center;
       font-size:3rem;
     }
+.icon-box{
+  display:flex;flex-flow:column;
+  position:fixed;left:2rem;top:2rem;
+}
 }
 footer{
   position:relative;
