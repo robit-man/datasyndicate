@@ -21,10 +21,10 @@ function connectWallet(event) {
     connectEthProvider(false);
 }   
 var metadata = {
-     "name": "SpacePepesFTM",
-     "description": "100 SpacePepe's from an unknown F-type main sequence star have received an arrival beacon through Lieutenant Pepe that extraterrestrial contact with Earth has been established. They want to use the energy of the earthlings living there and establish a permanent settlement. Though they look terrifying, these SpacePepes are smart creatures that love the fine arts like the Opera.",
-     "image": 'https://spacepepes.com/pepes/',
-     "external_url": 'https://spacepepes.com/pepes/'
+     "name": "GEOMETRICFORMS",
+     "description": "GEOMETRIC FORMS is a collection of 100 unique FORMS NFTs - a digital version of generative geometry and post processed colour found in mathematics and art. With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token on the Ethereum blockchain for immutable history and decentralized ownership. Purchasing a GEOMETRIC FORM will cost 0.5 ETH each. Owning FORMS will grant you access to monthly art raffles airdropping from Geometric Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.",
+     "image": 'https://geometricforms.io/forms/',
+     "external_url": 'https://geometricforms.io/forms/'
 };
 </script>
 
@@ -52,7 +52,7 @@ var metadata = {
         nfttitle="{metadata['name']} #{nft['nftId']}"
         desc="{metadata['description']}"
         owner="Owner I"
-        nftimage='/pepes/{nft['image']}'
+        nftimage='/forms/{nft['image']}'
         protocol='ERC-721'
           />
           <img class="scrollimg" src="/imgs/Bar-Arrow.gif" alt="" />

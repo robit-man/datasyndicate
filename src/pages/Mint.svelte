@@ -31,10 +31,10 @@
     <div class="wrapper">
         <div class="mint-box">
             <div class="mint-title-box">
-                <h1>MINT A SPACEPEPE</h1>
+                <h1>MINT A GEOMETRIC FORM</h1>
                 <p>Only one per account.</p>
                 {#if $totalSupply > 0}
-                <p>{$totalSupply}/99 Minted</p>
+                <p>{$totalSupply}/100 Minted</p>
                 {/if}
             </div>
             <div class="mint-image-wrapper">
@@ -45,16 +45,16 @@
               {/if}
             </div>
             <div style="margin-bottom:2rem;">
-              Price: 500 FTM
+              Price: 0.5ETH
             </div>
             {#if $etherLoading === false}
             <div class="mint-button-wrapper">
                 {#if !$address}
                   <button on:click={connectWallet}><h2>CONNECT WALLET</h2></button>
                 {:else if $alreadyMinted == true}
-                  <Link to='/mypepes'><button ><h2>MY SPACEPEPES</h2></button></Link>
+                  <Link to='/myforms'><button ><h2>MY GEOMETRICFORMS</h2></button></Link>
                 {:else}
-                  <button><h2>SOLD OUT</h2></button>
+                  <button on:click={mint}><h2>MINT</h2></button>
                 {/if}
             </div>
             {/if}

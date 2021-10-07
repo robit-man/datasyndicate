@@ -7,7 +7,6 @@ import {
     provider,
     network,
     nfts,
-    alreadyMinted,
     etherLoading,
     balances,
     totalSupply,
@@ -16,7 +15,7 @@ import {
 import { abi } from './abis/SpacePepe.json';
 import { get } from 'svelte/store'
 
-const NFT_CONTRACT_ADDRESS = '0x0253D4Cf2049a5E0D9f99706074DCe5E7F296e52'
+const NFT_CONTRACT_ADDRESS = '0xC963361075aB690A4CA5c4Df467d33Ff6A7d622e'
 export async function initProvider(app, reconnect = false) {
     var signer, addr, p;
     try {
@@ -32,17 +31,16 @@ export async function initProvider(app, reconnect = false) {
     }
 
     var nid = await p.getNetwork()
+    
     var nftContract = new ethers.Contract(NFT_CONTRACT_ADDRESS, abi, signer);
-    var minted = await nftContract.minted(addr)
     var total = await nftContract.currentTokenId();
     var supply = await nftContract.MAX_SUPPLY();
-
+    
     totalSupply.set(total)
     address.set(addr)
     contract.set(nftContract);
     network.set(nid.chainId);
     provider.set(p);
-    alreadyMinted.set(minted);
     maxSupply.set(supply);
 
     var baseURI = await nftContract.baseTokenURI();
@@ -89,7 +87,7 @@ export async function mintPepe() {
     const nftContract = get(contract)
     const signer = p.getSigner();
     try {
-        const resp = await nftContract.mint({ value: ethers.utils.parseEther('500') });
+        const resp = await nftContract.mint({ value: ethers.utils.parseEther('0.5') });
         etherLoading.set(true);
 
         await resp.wait().then(
@@ -104,7 +102,6 @@ export async function mintPepe() {
         return false;
     }
     etherLoading.set(false);
-    alreadyMinted.set(true);
     supply = await contract.totalSupply();
     totalSupply.set(supply);
 }
@@ -138,12 +135,18 @@ function onDisconnect() {
     console.log("onDisconnect");
 }
 
-export async function subscribeToTransferEvent(provider,contract) {
-    const filter = {
-      topics: [ethers.utils.id('Transfer(address,address,uint256')]
-    };
-    provider.on(filter, async () => {
-        var total = await contract.totalSupply();
+export async function subscribeToTransferEvent(provider) {
+    var nftContract = get(contract);
+
+    nftContract.on("Transfer", async (to, amount, from) => {
+        var nftContract = get(contract);
+        var total = await nftContract.currentTokenId();
         totalSupply.set(total)
+        var resp = await fetch('/.netlify/functions/get_gallery', {
+            method: 'POST',
+            body: JSON.stringify({})
+        })
+        resp = await (await (resp).json())
+        nfts.set(resp);        
     });
   }
