@@ -13,8 +13,8 @@
 package = "@netlify/plugin-functions-install-core"  
 
 [[redirects]]
-  from = "/json/pepes/*"
-  to = "/json/pepes/"
+  from = "/json/*"
+  to = "/json/"
   status = 200
 
 [[redirects]]

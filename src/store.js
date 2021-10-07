@@ -28,3 +28,4 @@ export const etherLoading = createWritableStore('etherLoading', false);
 export const balances = createWritableStore('balances', [])
 export const maxSupply = createWritableStore('maxSupply', 0);
 export const totalSupply = createWritableStore('totalSupply', 0);
+export const justMinted = createWritableStore('justMinted', '');
