@@ -3,6 +3,7 @@ import { onMount, getContext} from 'svelte';
 import { slide, fade } from 'svelte/transition';
 import { address, contract, provider, nfts, balances } from '../store';
 import { Swiper, SwiperSlide } from 'swiper/svelte';
+import { initProvider, mintPepe } from '../utils';
 import "swiper/css/pagination"
 import Carousel from 'svelte-carousel'
 import {
@@ -37,6 +38,20 @@ import {
   function mintSection() {
 		activeSection = 4;
 	}
+  let addressDisplay = '';
+  async function connectEthProvider(reconnect=false) {
+        if(!$address) {
+            await initProvider(app, reconnect);
+            addressDisplay = String($address).slice(0,7)+"..."+String($address).slice(-5);
+            $address = $address;
+        }
+    }
+  function connect() {
+    connectEthProvider(false);
+  }
+  function mint() {
+    mintPepe();
+  }
 </script>
 
 <Fullpage bind:activeSection arrows drag> 
@@ -123,86 +138,20 @@ import {
               
           </div>
         </div>
-        <div class="nobox desktop" style="justify-content: center;flex-flow:column;">
+        <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
           <Carousel class="test "
           particlesToShow={4}
           particlesToScroll={2}
         >
-        <div class="nft-card">
-           
-          <div class="nft-card-inner">
-            
-            <img transition:fade src="/imgs/forms/line-000192.png" style="z-index:2;position:relative;width:256px" alt="">
-          
+        {#each $nfts as nft}
+          <div class="nft-card">
+            <div class="nft-card-inner">
+              <img transition:fade src="/forms/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
+            </div>
           </div>
-          
-        </div>
-        <div class="nft-card">
-          <div class="nft-card-inner">
-            
-            <img transition:fade src="/imgs/forms/line-000256.png" style="z-index:2;position:relative;width:256px" alt="">
-          
-          </div>
-          
-        </div>
-        <div class="nft-card">
-          <div class="nft-card-inner">
-            
-            <img transition:fade src="/imgs/forms/line-000295.png" style="z-index:2;position:relative;width:256px" alt="">
-          
-          </div>
-          
-        </div>
-        <div class="nft-card">
-          <div class="nft-card-inner">
-            
-            <img transition:fade src="/imgs/forms/line-000372.png" style="z-index:2;position:relative;width:256px" alt="">
-          
-          </div>
-          
-        </div>
-        </Carousel> 
-        
-      </div>
-        <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
+        {/each}
 
-        <Carousel class="test "
-      
-      >
-      <div class="nft-card">
-         
-        <div class="nft-card-inner">
-          
-          <img transition:fade src="/imgs/forms/line-000192.png" style="z-index:2;position:relative;width:256px" alt="">
-        
-        </div>
-        
-      </div>
-      <div class="nft-card">
-        <div class="nft-card-inner">
-          
-          <img transition:fade src="/imgs/forms/line-000256.png" style="z-index:2;position:relative;width:256px" alt="">
-        
-        </div>
-        
-      </div>
-      <div class="nft-card">
-        <div class="nft-card-inner">
-          
-          <img transition:fade src="/imgs/forms/line-000295.png" style="z-index:2;position:relative;width:256px" alt="">
-        
-        </div>
-        
-      </div>
-      <div class="nft-card">
-        <div class="nft-card-inner">
-          
-          <img transition:fade src="/imgs/forms/line-000372.png" style="z-index:2;position:relative;width:256px" alt="">
-        
-        </div>
-        
-      </div>
-      </Carousel>
+        </Carousel>
         </div>
       </div>
 		</Container>
@@ -275,7 +224,13 @@ import {
                   Click mint, and claim your unique ERC-721 Geometric FORM!
                   <br><br>
                 </p>
-                <button style="margin-left:unset;" class="button-padding">MINT A FORM</button>
+                {#if !$address}
+                  <button on:click={connect} style="margin-left:unset;" class="button-padding">CONNECT WALLET</button>
+                {:else}
+                  <button on:click={mint} style="margin-left:unset;" class="button-padding">MINT A FORM</button>
+                  <br />{addressDisplay}  
+                {/if}                
+                
 
               </div>
             </Col>
