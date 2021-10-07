@@ -46,7 +46,7 @@ import {
 				<div class="hero-title" >
           <div class="row ">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber">
+              <div class="pagenumber  desktop">
               <p class="bigfont" style="font-weight:400;margin:unset!important;">01</p>
               <div class="underline"></div>
               <div class="page-name">Home</div>
@@ -77,7 +77,7 @@ import {
 				<div class="container-child-wrapper-padding" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber">
+              <div class="pagenumber  desktop">
               <p class="bigfont">02</p>
               <div class="underline"></div>
               <div class="page-name">About</div>
@@ -214,7 +214,7 @@ import {
 				<div class="container-child-wrapper-padding" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber">
+              <div class="pagenumber  desktop">
               <p class="bigfont">04</p>
               <div class="underline"></div>
               <div class="page-name">Process</div>
@@ -258,7 +258,7 @@ import {
 				<div class="container-child-wrapper-padding" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber">
+              <div class="pagenumber desktop">
               <p class="bigfont">05</p>
               <div class="underline"></div>
               <div class="page-name">Mint</div>
@@ -387,7 +387,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     justify-content:center;}
     .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;}
     .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
-    .second-container{padding:2rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
+    .second-container{padding:0rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem;}
     .metamask-container{overflow:hidden;height:calc(100vw - 4rem);width:calc(100vw - 4rem);border:unset;}
@@ -418,7 +418,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   justify-content:center;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;height:100vh;}
 
-    .rotate-title{margin-left:2rem;transform:rotate(0deg);text-align:left;width: max-content; }
+    .rotate-title{margin-left:0rem;transform:rotate(0deg);text-align:left;width: max-content; }
 
     .description{text-align:left;margin-left:0px;width:auto;padding-right:0px;}
     .nobox{width:100vw;}
