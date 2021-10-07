@@ -46,7 +46,7 @@ import {
 				<div class="hero-title" >
           <div class="row ">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber  desktop">
+              <div class="pagenumber">
               <p class="bigfont" style="font-weight:400;margin:unset!important;">01</p>
               <div class="underline"></div>
               <div class="page-name">Home</div>
@@ -77,7 +77,7 @@ import {
 				<div class="container-child-wrapper-padding" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber  desktop">
+              <div class="pagenumber">
               <p class="bigfont">02</p>
               <div class="underline"></div>
               <div class="page-name">About</div>
@@ -214,7 +214,7 @@ import {
 				<div class="container-child-wrapper-padding" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber  desktop">
+              <div class="pagenumber">
               <p class="bigfont">04</p>
               <div class="underline"></div>
               <div class="page-name">Process</div>
@@ -258,7 +258,7 @@ import {
 				<div class="container-child-wrapper-padding" >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
-              <div class="pagenumber desktop">
+              <div class="pagenumber">
               <p class="bigfont">05</p>
               <div class="underline"></div>
               <div class="page-name">Mint</div>
@@ -369,7 +369,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   .geometry-container{width:800px;height:800px;border-radius:400px;margin:auto;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
   .iframe-wrap{padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
-  .pagenumber{margin-bottom: 1rem;}
+  .pagenumber{margin-bottom: 1rem;flex-flow: column;}
   .mediumtext{font-size:3rem;}
   .metamask-container{overflow:hidden;height:512px;width:512px;border:unset;}
   .second-container{padding:4rem 8rem; width:100%;display: flex;justify-content: center;flex-flow:column;}
@@ -389,7 +389,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
     .second-container{padding:0rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
-    .pagenumber{margin-bottom: 1rem;}
+    .pagenumber{margin-bottom: 1rem; display:none;}
     .metamask-container{overflow:hidden;height:calc(100vw - 4rem);width:calc(100vw - 4rem);border:unset;}
     .mediumtext{font-size:2rem;}
 
