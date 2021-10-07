@@ -103,7 +103,7 @@ header{z-index:5;position:relative;}
       font-size:3rem;
     }
 .icon-box{
-  display:flex;flex-flow:column;
+  display:none;flex-flow:column;
   position:fixed;left:2rem;top:2rem;
 }
 }
