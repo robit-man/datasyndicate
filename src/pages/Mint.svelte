@@ -1,7 +1,7 @@
 <script>
     import { Link } from "svelte-routing";
     import { fade } from 'svelte/transition';
-    import { address, contract, provider, alreadyMinted, etherLoading, totalSupply, maxSupply } from '../store';
+    import { address, contract, provider, etherLoading, totalSupply, maxSupply } from '../store';
     import { onMount, getContext} from 'svelte';
     import { 
         initProvider,
@@ -9,7 +9,7 @@
     } from '../utils.js';
 
     const app = getContext('app');
-    var addressDisplay = ''
+    let addressDisplay = ''
     async function connectEthProvider(reconnect=false) {
         if(!$address) {
             await initProvider(app, reconnect);
@@ -51,15 +51,13 @@
             <div class="mint-button-wrapper">
                 {#if !$address}
                   <button on:click={connectWallet}><h2>CONNECT WALLET</h2></button>
-                {:else if $alreadyMinted == true}
-                  <Link to='/myforms'><button ><h2>MY GEOMETRICFORMS</h2></button></Link>
                 {:else}
                   <button on:click={mint}><h2>MINT</h2></button>
                 {/if}
             </div>
             {/if}
             <div>
-                {addressDisplay}
+                {$addressDisplay}
             </div>
         </div>    
     </div>
