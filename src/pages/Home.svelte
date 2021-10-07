@@ -345,6 +345,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     .second-container{padding:2rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem;}
+    .metamask-container{overflow:hidden;height:calc(100vw - 4rem);width:calc(100vw - 4rem);border:unset;}
 
   .container-child-wrapper{
     width:100vw;
