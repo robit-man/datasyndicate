@@ -88,8 +88,8 @@ import {
   
 	<FullpageSection style="background:#ee0530!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div class="container-child-wrapper" >
-				<div class="container-child-wrapper-padding" >
+      <div class="container-child-wrapper wrap-reverse" >
+				<div class="container-child-wrapper-padding " >
           <div class="row half">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
@@ -138,9 +138,13 @@ import {
               
           </div>
         </div>
-        <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
+        <div class="nobox " style="display:flex;justify-content: center;flex-flow:column;">
+          {#if !$address}
+        <button on:click={connect} style="margin:auto;" class="button-padding">CONNECT WALLET</button>
+        {:else}
           <Carousel class="test "
         >
+       
         {#each $nfts as nft}
           <div class="nft-card">
             <div class="nft-card-inner">
@@ -150,7 +154,9 @@ import {
         {/each}
 
         </Carousel>
-        </div>
+        
+        {/if}   
+      </div>
       </div>
 		</Container>
 	</FullpageSection>
@@ -213,8 +219,8 @@ import {
             <Col style="width:auto;">
             
               <div transition:slide class="description">
-                <p class="mediumtext" style="font-weight:100;margin:unset!important;">GEOMETRIC</p>
-                <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FORMS</b></p>
+                <p class="mediumtext" style="font-weight:100;margin:unset!important;">MINT A</p>
+                <p class="mediumtext" style="font-weight:100;font-weight:900;margin:unset!important;">GEOMETRIC<b style="font-weight:900;margin:unset!important;">FORM</b></p>
                 <p><b>Here's how to mint</b>
                   <br><br>
                   Click the fox and confirm with metamask
@@ -339,10 +345,10 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     display:flex;
     flex-flow:column;
     justify-content:center;}
-    .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;}
-    .img-effect > img{height:300px;width:300px;}
-    .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
-    .second-container{padding:0rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
+    .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;margin-top:1rem;}
+    .img-effect > img{height:250px;width:250px;}
+    .imgbox{max-height:242px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+    .second-container{padding:1rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem; display:none;}
     .metamask-container{overflow:hidden;height:calc(100vw - 4rem);width:calc(100vw - 4rem);border:unset;}
@@ -350,6 +356,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 
     .mobile{display:flex;}
 .desktop{display:none;}
+.wrap-reverse{flex-flow: column-reverse!important;
+justify-content: flex-end!important;}
   .container-child-wrapper{
     width:100vw;
     margin-top:132px;
@@ -365,8 +373,8 @@ max-height: 512px;}
     .svelte-fp-indicator{width:4rem!important;}
     .container-child-wrapper-padding{
   padding-left: 2rem;
-  padding-top:3rem;
-  padding-bottom:2rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
   padding-right:2rem;
   width:auto;
   height:auto;
