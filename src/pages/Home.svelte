@@ -54,7 +54,7 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
-              <h5 style="margin:unset;margin-bottom:1rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
+              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
               <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
               <p class="bigfont" style="font-weight:900;color:#ee0530;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
             </div>
@@ -374,12 +374,12 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     .description{text-align:left;margin-left:0px;width:auto;padding-right:0px;}
     .nobox{width:100vw;}
 
-    .hero-title{    margin-top: -100px;
+    .hero-title{    margin-top: -132px;
     padding-left: 2rem;
-    padding-top: 100px;
+    padding-top: 132px;
     padding-bottom: 2rem;
     width: 100vw;
-    height: calc(30% - 100px);
+    height: calc(30% - 132px);
     display: flex;
     flex-flow: column;
     justify-content: center;
