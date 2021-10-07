@@ -104,7 +104,7 @@ import {
               <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>GEOMETRY</b></p>
               <p>GEOMETRIC FORMS is a collection of 100 unique FORM NFTs - a digital version of generative geometry and post processed colour found in mathematics and art.
                 <br><br>
-                With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on thje Ethereum blockchain for immutable history and decentralized ownership.
+                With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
               </p>
             </div>
             </Col>
@@ -187,7 +187,7 @@ import {
               
           </div>
         </div>
-        <div style="padding:4rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;">
+        <div class="container-child-wrapper-padding">
           <div transition:slide class="description">
             <p class="mediumtext" style="font-weight:100;margin:unset!important;">PURCHASING</p>
             <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
@@ -290,8 +290,10 @@ import {
 </Fullpage>
 
 <style type="text/scss">
+.pagenumber > .bigfont{margin: unset !important;}
 .container-child-wrapper{width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;}
 .img-effect{display: flex;height:512px;width:512px;position:relative;margin:auto;}
+.img-effect > img{height:250px;width:250px;}
  .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
 }.imgbox{max-height:504px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
 .description{text-align:left;margin-left:8rem;width:512px;}
@@ -340,6 +342,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     flex-flow:column;
     justify-content:center;}
     .img-effect{display: flex;height:250px;width:250px;position:relative;margin:auto;}
+    .img-effect > img{height:250px;width:250px;}
     .imgbox{max-height:242px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
     .second-container{padding:0rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
@@ -351,7 +354,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 .desktop{display:none;}
   .container-child-wrapper{
     width:100vw;
-    margin-top:100px;
+    margin-top:132px;
+    padding-top:1rem;
     height:100vh;
     display:flex;
     flex-flow:column;
@@ -393,4 +397,3 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 
 }
 </style>
-2
