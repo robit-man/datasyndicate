@@ -1,7 +1,7 @@
 <script>
     import { Link } from "svelte-routing";
     import { fade } from 'svelte/transition';
-    import { address, contract, provider, alreadyMinted, etherLoading, totalSupply, maxSupply } from '../store';
+    import { address, contract, provider, etherLoading, totalSupply, maxSupply } from '../store';
     import { onMount, getContext} from 'svelte';
     import { 
         initProvider,
