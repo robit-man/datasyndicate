@@ -167,8 +167,7 @@ import {
         <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
 
         <Carousel class="test "
-        particlesToShow={1}
-        particlesToScroll={4}
+      
       >
       <div class="nft-card">
          
@@ -385,8 +384,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     display:flex;
     flex-flow:column;
     justify-content:center;}
-    .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;}
-    .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+    .img-effect{display: flex;height:250px;width:250px;position:relative;margin:auto;}
+    .imgbox{max-height:242px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
     .second-container{padding:0rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem; display:none;}
