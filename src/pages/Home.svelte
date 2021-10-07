@@ -47,7 +47,7 @@ import {
           <div class="row ">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
-              <p class="bigfont" style="font-weight:400;margin:unset;">01</p>
+              <p class="bigfont" style="font-weight:400;margin:unset!important;">01</p>
               <div class="underline"></div>
               <div class="page-name">Home</div>
             </div>
@@ -123,8 +123,8 @@ import {
               
           </div>
         </div>
-        <div class="nobox" style="display: flex;justify-content: center;flex-flow:column;">
-          <Carousel class="test"
+        <div class="nobox desktop" style="justify-content: center;flex-flow:column;">
+          <Carousel class="test "
           particlesToShow={4}
           particlesToScroll={2}
         >
@@ -161,7 +161,49 @@ import {
           </div>
           
         </div>
-        </Carousel>
+        </Carousel> 
+        
+      </div>
+        <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
+
+        <Carousel class="test "
+        particlesToShow={1}
+        particlesToScroll={4}
+      >
+      <div class="nft-card">
+         
+        <div class="nft-card-inner">
+          
+          <img transition:fade src="/imgs/forms/line-000192.png" style="z-index:2;position:relative;width:256px" alt="">
+        
+        </div>
+        
+      </div>
+      <div class="nft-card">
+        <div class="nft-card-inner">
+          
+          <img transition:fade src="/imgs/forms/line-000256.png" style="z-index:2;position:relative;width:256px" alt="">
+        
+        </div>
+        
+      </div>
+      <div class="nft-card">
+        <div class="nft-card-inner">
+          
+          <img transition:fade src="/imgs/forms/line-000295.png" style="z-index:2;position:relative;width:256px" alt="">
+        
+        </div>
+        
+      </div>
+      <div class="nft-card">
+        <div class="nft-card-inner">
+          
+          <img transition:fade src="/imgs/forms/line-000372.png" style="z-index:2;position:relative;width:256px" alt="">
+        
+        </div>
+        
+      </div>
+      </Carousel>
         </div>
       </div>
 		</Container>
@@ -312,6 +354,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 .nft-card-inner{padding-top:1.75rem;background-color:black;width:320px;height:512px;transition:all 0.2s ease;}
 .nft-card-inner > img {border-radius:256px;}
 .nft-card-inner:hover{background-color:#ee0530;}
+.mobile{display:none;}
+.desktop{display:flex;}
 .container-child-wrapper-padding{
   padding-left: 4rem;
   padding-top:4rem;
@@ -326,7 +370,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
   .iframe-wrap{padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
   .pagenumber{margin-bottom: 1rem;}
-  .medium-text{font-size:3rem;}
+  .mediumtext{font-size:3rem;}
   .metamask-container{overflow:hidden;height:512px;width:512px;border:unset;}
   .second-container{padding:4rem 8rem; width:100%;display: flex;justify-content: center;flex-flow:column;}
   .slider-wrap{padding-right: 4rem;padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;}
@@ -347,8 +391,10 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem;}
     .metamask-container{overflow:hidden;height:calc(100vw - 4rem);width:calc(100vw - 4rem);border:unset;}
-    .medium-text{font-size:2rem;}
+    .mediumtext{font-size:2rem;}
 
+    .mobile{display:flex;}
+.desktop{display:none;}
   .container-child-wrapper{
     width:100vw;
     margin-top:100px;
@@ -378,7 +424,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     .nobox{width:100vw;}
 
     .hero-title{    margin-top: -132px;
-    padding-left: 2rem;
+    padding-left: 0rem;
     padding-top: 132px;
     padding-bottom: 2rem;
     width: 100vw;
@@ -393,3 +439,4 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 
 }
 </style>
+2
