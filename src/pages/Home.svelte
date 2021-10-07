@@ -62,14 +62,14 @@ import {
           <div class="row ">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
               <div class="pagenumber">
-              <p class="bigfont" style="font-weight:400;margin:unset;">01</p>
+              <p class="bigfont" style="font-weight:400;margin:unset!important;">01</p>
               <div class="underline"></div>
               <div class="page-name">Home</div>
             </div>
             </Col>
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
-              <h5 style="margin:unset;margin-bottom:1rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
+              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
               <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
               <p class="bigfont" style="font-weight:900;color:#ee0530;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
             </div>
@@ -100,8 +100,8 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:slide class="description">
-              <p style="font-size:3rem;font-weight:100;margin:unset!important;">GENERATIVE</p>
-              <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>GEOMETRY</b></p>
+              <p class="mediumtext" style="font-weight:100;margin:unset!important;">GENERATIVE</p>
+              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>GEOMETRY</b></p>
               <p>GEOMETRIC FORMS is a collection of 100 unique FORM NFTs - a digital version of generative geometry and post processed colour found in mathematics and art.
                 <br><br>
                 With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on thje Ethereum blockchain for immutable history and decentralized ownership.
@@ -138,8 +138,8 @@ import {
               
           </div>
         </div>
-        <div class="nobox" style="display: flex;justify-content: center;flex-flow:column;">
-          <Carousel class="test"
+        <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
+          <Carousel class="test "
           particlesToShow={4}
           particlesToScroll={2}
         >
@@ -189,8 +189,8 @@ import {
         </div>
         <div style="padding:4rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;">
           <div transition:slide class="description">
-            <p style="font-size:3rem;font-weight:100;margin:unset!important;">PURCHASING</p>
-            <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
+            <p class="mediumtext" style="font-weight:100;margin:unset!important;">PURCHASING</p>
+            <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
             <p> <b>Purchasing a Geometric Form will cost 0.5 ETH each</b>
               <br><br>
               Owning a FORM will grant you access to monthly art raffles air dropping from Geometric Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.
@@ -215,8 +215,8 @@ import {
             <Col style="width:auto;">
             
               <div transition:slide class="description">
-                <p style="font-size:3rem;font-weight:100;margin:unset!important;">GEOMETRIC</p>
-                <p style="font-size:3rem;font-weight:900;margin:unset!important;"><b>FORMS</b></p>
+                <p class="mediumtext" style="font-weight:100;margin:unset!important;">GEOMETRIC</p>
+                <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FORMS</b></p>
                 <p><b>Here's how to mint</b>
                   <br><br>
                   Click the fox and confirm with metamask
@@ -308,6 +308,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 .nft-card-inner{padding-top:1.75rem;background-color:black;width:320px;height:512px;transition:all 0.2s ease;}
 .nft-card-inner > img {border-radius:256px;}
 .nft-card-inner:hover{background-color:#ee0530;}
+.mobile{display:none;}
+.desktop{display:flex;}
 .container-child-wrapper-padding{
   padding-left: 4rem;
   padding-top:4rem;
@@ -321,25 +323,32 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   .geometry-container{width:800px;height:800px;border-radius:400px;margin:auto;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
   .iframe-wrap{padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
+  .pagenumber{margin-bottom: 1rem;flex-flow: column;}
+  .mediumtext{font-size:3rem;}
   .metamask-container{overflow:hidden;height:512px;width:512px;border:unset;}
   .second-container{padding:4rem 8rem; width:100%;display: flex;justify-content: center;flex-flow:column;}
   .slider-wrap{padding-right: 4rem;padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:auto;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;}
 @media screen and (max-width:1600px){
   .slider-wrap{
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-top:4rem;
-    padding-bottom:4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top:2rem;
+    padding-bottom:2rem;
     width:auto;
-    height:calc(100vh - 8rem);
+    height:auto;
     display:flex;
     flex-flow:column;
     justify-content:center;}
-    .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;}
-    .imgbox{max-height:292px;max-width:292px;position:absolute;width:292px;height:292px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
-    .second-container{padding:2rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
-    .bigfont{font-size:3rem;line-height: 3rem!important;}
+    .img-effect{display: flex;height:250px;width:250px;position:relative;margin:auto;}
+    .imgbox{max-height:242px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+    .second-container{padding:0rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
+    .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
+    .pagenumber{margin-bottom: 1rem; display:none;}
+    .metamask-container{overflow:hidden;height:calc(100vw - 4rem);width:calc(100vw - 4rem);border:unset;}
+    .mediumtext{font-size:2rem;}
 
+    .mobile{display:flex;}
+.desktop{display:none;}
   .container-child-wrapper{
     width:100vw;
     margin-top:100px;
@@ -347,30 +356,41 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     display:flex;
     flex-flow:column;
     justify-content:flex-start;}   
- 
-    .iframe-wrap{padding:2rem 2rem; width:calc(100% - 4rem);display: flex;flex-flow:column;justify-content: flex-end;height:70%;}
-    .geometry-container{width:400px;height:400px;border-radius:400px;margin:auto;}
+ .row{display:flex;flex-flow:wrap;justify-content:center;}
+    .iframe-wrap{padding:2rem 2rem; width:calc(100% - 4rem);display: flex;flex-flow:column;justify-content: flex-end;height:60%;}
+    .geometry-container{width:80vw;height:80vw;border-radius:400px;margin:auto;}
     .svelte-fp-indicator{width:4rem!important;}
     .container-child-wrapper-padding{
   padding-left: 2rem;
-  padding-top:2rem;
+  padding-top:3rem;
   padding-bottom:2rem;
   padding-right:2rem;
   width:auto;
-  height:50%;
+  height:auto;
   display:flex;
   flex-flow:column;
   justify-content:center;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;height:100vh;}
 
-    .rotate-title{margin-left:2rem;transform:rotate(0deg);text-align:left;width:100vw; }
+    .rotate-title{margin-left:0rem;transform:rotate(0deg);text-align:left;width: max-content; }
 
     .description{text-align:left;margin-left:0px;width:auto;padding-right:0px;}
+    .nobox{width:100vw;}
 
-    .hero-title{margin-top: -100px;padding-left: 2rem;padding-top:2rem;padding-bottom:2rem;width:100vw;height:30%;display:flex;flex-flow:column;justify-content:center;background:#333!important;}
+    .hero-title{    margin-top: -132px;
+    padding-left: 0rem;
+    padding-top: 132px;
+    padding-bottom: 2rem;
+    width: 100vw;
+    height: calc(40% - 132px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: #333 !important;}
 
 }
 @media screen and (max-width:900px){
 
 }
 </style>
+2
