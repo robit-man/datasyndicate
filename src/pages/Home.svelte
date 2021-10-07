@@ -140,8 +140,6 @@ import {
         </div>
         <div class="nobox mobile" style="justify-content: center;flex-flow:column;">
           <Carousel class="test "
-          particlesToShow={4}
-          particlesToScroll={2}
         >
         {#each $nfts as nft}
           <div class="nft-card">
@@ -293,7 +291,7 @@ import {
 .pagenumber > .bigfont{margin: unset !important;}
 .container-child-wrapper{width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;}
 .img-effect{display: flex;height:512px;width:512px;position:relative;margin:auto;}
-.img-effect > img{height:250px;width:250px;}
+.img-effect > img{height:512px;width:512px;}
  .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
 }.imgbox{max-height:504px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
 .description{text-align:left;margin-left:8rem;width:512px;}
