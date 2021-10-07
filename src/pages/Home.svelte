@@ -1,7 +1,7 @@
 <script>
 import { onMount, getContext} from 'svelte';
 import { slide, fade } from 'svelte/transition';
-import { address, contract, provider, nfts, balances } from '../store';
+import { address, contract, provider, nfts, balances, justMinted } from '../store';
 import { Swiper, SwiperSlide } from 'swiper/svelte';
 import { initProvider, mintPepe } from '../utils';
 import "swiper/css/pagination"
@@ -236,7 +236,16 @@ import {
           </div>
         </div>
         <div class="second-container">
-      <iframe src="/metamask.html" class="metamask-container" frameborder="0"></iframe>
+            {#if !$justMinted}
+              <iframe src="/metamask.html" class="metamask-container" frameborder="0"></iframe>
+            {:else}
+              <div class="second-container">
+                <div class="img-effect">
+                  <img transition:fade src="{$justMinted}" style="z-index:2;position:relative;" alt="">
+                  <div class="imgbox"></div>
+                </div>
+              </div>
+            {/if}
         </div>
       </div>
 		</Container>
