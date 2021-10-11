@@ -80,7 +80,7 @@ button:hover {
 .sc-carousel__arrow-container{opacity:0;}
 .nobox .sc-carousel__pages-window{box-shadow:unset!important;}
 
-.sc-carousel__pages-window{box-shadow:12px 12px #ee0530, 16px 16px 0px 0px, 8px 16px, 16px 8px;}
+.sc-carousel__pages-window{box-shadow:12px 12px #05eecd, 16px 16px 0px 0px, 8px 16px, 16px 8px;}
 .svelte-fp-indicator-list{width:88px;}
 .swiper-pagination-bullet{
 	background: #4d4fc8;

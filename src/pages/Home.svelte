@@ -55,7 +55,7 @@ import {
 </script>
 
 <Fullpage bind:activeSection arrows drag> 
-	<FullpageSection style="background:#111!important;"  center>
+	<FullpageSection style=""  center>
 		<Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
       <div class="container-child-wrapper" >
 				<div class="hero-title" >
@@ -71,14 +71,13 @@ import {
             <div transition:fade class="rotate-title">
               <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
               <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
-              <p class="bigfont" style="font-weight:900;color:#ee0530;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
+              <p class="bigfont" style="font-weight:900;color:#6405ee;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
             </div>
             </Col>
               
           </div>
         </div>
         <div class="iframe-wrap">
-          <iframe src="/strings.html" class="geometry-container" frameborder="0"></iframe>
           <button on:click={mintSection} class="button-padding"> SKIP TO MINTING</button>
 
         </div>
@@ -86,7 +85,7 @@ import {
 		</Container>
 	</FullpageSection>	
   
-	<FullpageSection style="background:#ee0530!important;"  center>
+	<FullpageSection style="background:#6405ee!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
       <div class="container-child-wrapper wrap-reverse" >
 				<div class="container-child-wrapper-padding " >
@@ -160,7 +159,7 @@ import {
       </div>
 		</Container>
 	</FullpageSection>
-	<FullpageSection style="background:#ee0530!important;"  center>
+	<FullpageSection style="background:#6405ee!important;"  center>
     <Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
       <div class="container-child-wrapper" >
 				<div class="container-child-wrapper-padding" >
@@ -322,7 +321,7 @@ flex-flow: row;
 justify-content: center;background-color:#111;width:calc(256px + 2rem);height:512px;transition:all 0.2s ease;}
 .nft-card-inner{padding-top:1.75rem;background-color:black;width:320px;height:512px;transition:all 0.2s ease;}
 .nft-card-inner > img {border-radius:256px;}
-.nft-card-inner:hover{background-color:#ee0530;}
+.nft-card-inner:hover{background-color:#6405ee;}
 .mobile{display:none;}
 .desktop{display:flex;}
 .container-child-wrapper-padding{
@@ -337,7 +336,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   .bigfont{font-size:5rem;}
   .geometry-container{width:800px;height:800px;border-radius:400px;margin:auto;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
-  .iframe-wrap{padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
+  .iframe-wrap{background-image:url(/imgs/Telegraph.JPG)!important;background-position:center;background-size:cover;padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
   .pagenumber{margin-bottom: 1rem;flex-flow: column;}
   .mediumtext{font-size:3rem;}
   .metamask-container{overflow:hidden;height:512px;width:512px;border:unset;}
