@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 html {
 	scroll-behavior: smooth;
 }
@@ -9,7 +8,7 @@ body {
 	background-color: black;
 	color:white;
 	overflow-x: hidden;
-    font-family: 'Work Sans', sans-serif;}
+	font-family: 'Rajdhani', sans-serif;}
 	
 p{ font-weight:300;
     }
@@ -80,7 +79,7 @@ button:hover {
 .sc-carousel__arrow-container{opacity:0;}
 .nobox .sc-carousel__pages-window{box-shadow:unset!important;}
 
-.sc-carousel__pages-window{box-shadow:12px 12px #05eecd, 16px 16px 0px 0px, 8px 16px, 16px 8px;}
+.sc-carousel__pages-window{box-shadow:12px 12px #6405ee, 16px 16px 0px 0px, 8px 16px, 16px 8px;}
 .svelte-fp-indicator-list{width:88px;}
 .swiper-pagination-bullet{
 	background: #4d4fc8;

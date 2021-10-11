@@ -69,9 +69,9 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
-              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE FORMS</h5>
-              <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">GEOMETRIC</p>
-              <p class="bigfont" style="font-weight:900;color:#6405ee;margin:unset!important;line-height: 5rem;"><b>FORMS</b></p>
+              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE VIEWS</h5>
+              <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">MANDEL</p>
+              <p class="bigfont" style="font-weight:900;color:#6405ee;margin:unset!important;line-height: 5rem;"><b>VIEWS</b></p>
             </div>
             </Col>
               
@@ -100,10 +100,10 @@ import {
             <Col style="width:auto;">
             <div transition:slide class="description">
               <p class="mediumtext" style="font-weight:100;margin:unset!important;">GENERATIVE</p>
-              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>GEOMETRY</b></p>
-              <p>GEOMETRIC FORMS is a collection of 100 unique FORM NFTs - a digital version of generative geometry and post processed colour found in mathematics and art.
+              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FRACTALS</b></p>
+              <p>MANDEL VIEWS is a collection of 100 unique VIEW NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
                 <br><br>
-                With only 100 NFTs created, the symmetry, geometry, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
+                With only 100 NFTs created, the symmetry, FRACTALS, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
               </p>
             </div>
             </Col>
@@ -112,7 +112,7 @@ import {
         </div>
         <div class="second-container">
           <div class="img-effect">
-            <img transition:fade src="/imgs/forms/line-000363.png" style="z-index:2;position:relative;" alt="">
+            <img transition:fade src="/imgs/VIEWs/line-000363.png" style="z-index:2;position:relative;" alt="">
             <div class="imgbox"></div>
           </div>
         </div>
@@ -147,7 +147,7 @@ import {
         {#each $nfts as nft}
           <div class="nft-card">
             <div class="nft-card-inner">
-              <img transition:fade src="/forms/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
+              <img transition:fade src="/VIEWs/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
             </div>
           </div>
         {/each}
@@ -178,9 +178,9 @@ import {
 
               <Carousel>
                 
-                <img transition:fade src="/imgs/forms/line-000346.png" style="z-index:2;position:relative;width:256px" alt="">
-                <img transition:fade src="/imgs/forms/line-000234.png" style="z-index:2;position:relative;width:256px" alt="">
-                <img transition:fade src="/imgs/forms/line-000382.png" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/VIEWs/line-000346.png" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/VIEWs/line-000234.png" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/VIEWs/line-000382.png" style="z-index:2;position:relative;width:256px" alt="">
                
               </Carousel>   
 
@@ -193,10 +193,10 @@ import {
         <div class="container-child-wrapper-padding">
           <div transition:slide class="description">
             <p class="mediumtext" style="font-weight:100;margin:unset!important;">PURCHASING</p>
-            <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
-            <p> <b>Purchasing a Geometric Form will cost 0.5 ETH each</b>
+            <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INVIEWATION</b></p>
+            <p> <b>Purchasing a MANDEL VIEW will cost 0.5 ETH each</b>
               <br><br>
-              Owning a FORM will grant you access to monthly art raffles air dropping from Geometric Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.
+              Owning a VIEW will grant you access to monthly art raffles air dropping from MANDEL Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.
             </p>
           </div>
         </div>
@@ -219,18 +219,18 @@ import {
             
               <div transition:slide class="description">
                 <p class="mediumtext" style="font-weight:100;margin:unset!important;">MINT A</p>
-                <p class="mediumtext" style="font-weight:100;font-weight:900;margin:unset!important;">GEOMETRIC<b style="font-weight:900;margin:unset!important;">FORM</b></p>
+                <p class="mediumtext" style="font-weight:100;font-weight:900;margin:unset!important;">MANDEL<b style="font-weight:900;margin:unset!important;">VIEW</b></p>
                 <p><b>Here's how to mint</b>
                   <br><br>
                   Click the fox and confirm with metamask
                   <br><br>
-                  Click mint, and claim your unique ERC-721 Geometric FORM!
+                  Click mint, and claim your unique ERC-721 MANDEL VIEW!
                   <br><br>
                 </p>
                 {#if !$address}
                   <button on:click={connect} style="margin-left:unset;" class="button-padding">CONNECT WALLET</button>
                 {:else}
-                  <button on:click={mint} style="margin-left:unset;" class="button-padding">MINT A FORM</button>
+                  <button on:click={mint} style="margin-left:unset;" class="button-padding">MINT A VIEW</button>
                   <br />{addressDisplay}  
                 {/if}                
                 
@@ -334,9 +334,9 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
   flex-flow:column;
   justify-content:center;}
   .bigfont{font-size:5rem;}
-  .geometry-container{width:800px;height:800px;border-radius:400px;margin:auto;}
+  .FRACTALS-container{width:800px;height:800px;border-radius:400px;margin:auto;}
   .col-mod{display:flex;flex-flow:column;justify-content:center;width:auto;}
-  .iframe-wrap{background-image:url(/imgs/Telegraph.JPG)!important;background-position:center;background-size:cover;padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
+  .iframe-wrap{filter:brightness(1)saturate(2)contrast(1.5);background-image:url(/imgs/Telegraph.JPG)!important;background-position:center;background-size:cover;padding:4rem 8rem; width:100%;display: flex;justify-content: flex-end;}
   .pagenumber{margin-bottom: 1rem;flex-flow: column;}
   .mediumtext{font-size:3rem;}
   .metamask-container{overflow:hidden;height:512px;width:512px;border:unset;}
@@ -376,7 +376,7 @@ justify-content: flex-end!important;}
     justify-content:flex-start;}   
  .row{display:flex;flex-flow:wrap;justify-content:center;}
     .iframe-wrap{padding:2rem 2rem; width:calc(100% - 4rem);display: flex;flex-flow:column;justify-content: flex-end;height:60%;}
-    .geometry-container{width:80vw;height:80vw;border-radius:400px;margin:auto;max-width: 512px;
+    .FRACTALS-container{width:80vw;height:80vw;border-radius:400px;margin:auto;max-width: 512px;
 max-height: 512px;}
     .svelte-fp-indicator{width:4rem!important;}
     .container-child-wrapper-padding{

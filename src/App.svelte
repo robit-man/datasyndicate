@@ -48,7 +48,7 @@
             <div class="icon-dot"></div>
           </div>
         </div>
-          <p style="margin-top: 1rem;font-weight:100;font-size: 2rem;line-height:2rem;">GEOMETRIC<b style="font-weight:900;">FORMS</b></p>
+          <p style="margin-top: 1rem;font-weight:100;font-size: 2rem;line-height:2rem;">MANDEL<b style="font-weight:900;">VIEWS</b></p>
         </div>
       </header>
 
