@@ -193,7 +193,7 @@ import {
         <div class="container-child-wrapper-padding">
           <div transition:slide class="description">
             <p class="mediumtext" style="font-weight:100;margin:unset!important;">PURCHASING</p>
-            <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INVIEWATION</b></p>
+            <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
             <p> <b>Purchasing a MANDEL VIEW will cost 0.5 ETH each</b>
               <br><br>
               Owning a VIEW will grant you access to monthly art raffles air dropping from MANDEL Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.
