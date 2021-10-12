@@ -69,7 +69,7 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
-              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 111 UNIQUE VIEWS</h5>
+              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 111 UNIQUE MANDELS</h5>
               <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">MANDEL</p>
               <p class="bigfont" style="font-weight:900;color:#6405ee;margin:unset!important;line-height: 5rem;"><b>VIEWS</b></p>
             </div>
@@ -101,7 +101,7 @@ import {
             <div transition:slide class="description">
               <p class="mediumtext" style="font-weight:100;margin:unset!important;">GENERATIVE</p>
               <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FRACTALS</b></p>
-              <p>MANDEL VIEWS is a collection of 111 unique VIEW NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
+              <p>MANDEL VIEWS is a collection of 111 unique MANDEL NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
                 <br><br>
                 With only 111 NFTs created, the symmetry, FRACTALS, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
               </p>
