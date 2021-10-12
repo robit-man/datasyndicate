@@ -192,7 +192,7 @@ import {
           <div transition:slide class="description">
             <p class="mediumtext" style="font-weight:100;margin:unset!important;">PURCHASING</p>
             <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
-            <p> <b>Purchasing a MANDEL VIEW will cost ΦΞ (1.618033988749894848 ETH each.</b>
+            <p> <b>Purchasing a MANDEL VIEW will cost ΦΞ (1.618033988749894848 ETH) each.</b>
               You are purchasing one of the MANDELS, a mandelviews NFT created from a high quality 8k resolution image so that it displays well on even the best monitors. <br><br>Each of the MANDELS is uniquely hand picked out of the Mandelbrot Set with the navigation and wisdom of decades of fractal explorations.
             </p>
           </div>
