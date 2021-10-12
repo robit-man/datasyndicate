@@ -69,7 +69,7 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:fade class="rotate-title">
-              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 100 UNIQUE VIEWS</h5>
+              <h5 style="margin:unset;margin-top:1rem;margin-bottom:0.5rem;margin-left:0.25rem;">COLLECTION : 111 UNIQUE VIEWS</h5>
               <p class="bigfont" style="font-weight:100;margin:unset!important;line-height: 5rem;">MANDEL</p>
               <p class="bigfont" style="font-weight:900;color:#6405ee;margin:unset!important;line-height: 5rem;"><b>VIEWS</b></p>
             </div>
@@ -101,9 +101,9 @@ import {
             <div transition:slide class="description">
               <p class="mediumtext" style="font-weight:100;margin:unset!important;">GENERATIVE</p>
               <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FRACTALS</b></p>
-              <p>MANDEL VIEWS is a collection of 100 unique VIEW NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
+              <p>MANDEL VIEWS is a collection of 111 unique VIEW NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
                 <br><br>
-                With only 100 NFTs created, the symmetry, FRACTALS, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
+                With only 111 NFTs created, the symmetry, FRACTALS, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
               </p>
             </div>
             </Col>
@@ -112,7 +112,7 @@ import {
         </div>
         <div class="second-container">
           <div class="img-effect">
-            <img transition:fade src="/imgs/VIEWs/line-000363.png" style="z-index:2;position:relative;" alt="">
+            <img transition:fade src="/imgs/views/Black Diamond Bacterium.JPG" style="z-index:2;position:relative;" alt="">
             <div class="imgbox"></div>
           </div>
         </div>
@@ -147,7 +147,7 @@ import {
         {#each $nfts as nft}
           <div class="nft-card">
             <div class="nft-card-inner">
-              <img transition:fade src="/VIEWs/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
+              <img transition:fade src="/views/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
             </div>
           </div>
         {/each}
@@ -178,9 +178,9 @@ import {
 
               <Carousel>
                 
-                <img transition:fade src="/imgs/VIEWs/line-000346.png" style="z-index:2;position:relative;width:256px" alt="">
-                <img transition:fade src="/imgs/VIEWs/line-000234.png" style="z-index:2;position:relative;width:256px" alt="">
-                <img transition:fade src="/imgs/VIEWs/line-000382.png" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/views/candy cane spirals.JPG" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/views/Bearded Iris.JPG" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/views/A golden Mandelbrot.JPG" style="z-index:2;position:relative;width:256px" alt="">
                
               </Carousel>   
 
