@@ -145,7 +145,7 @@ import {
         {#each $nfts as nft}
           <div class="nft-card">
             <div class="nft-card-inner">
-              <img transition:fade src="/views/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
+              <img transition:fade src="/mandelviews/{nft['image']}" style="z-index:2;position:relative;width:256px" alt="">
             </div>
           </div>
         {/each}
