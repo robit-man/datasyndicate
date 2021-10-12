@@ -319,7 +319,7 @@ justify-content: center;height:288px;width:512px;position:relative;margin:auto;}
 flex-flow: row;
 justify-content: center;background-color:#111;width:calc(256px + 2rem);height:auto;transition:all 0.2s ease;}
 .nft-card-inner{padding:1rem;background-color:black;width:320px;height:auto;transition:all 0.2s ease;}
-.nft-card-inner > img {}
+.nft-card-inner > img {pointer-events: none;}
 .nft-card-inner:hover{background-color:#6405ee;}
 .mobile{display:none;}
 .desktop{display:flex;}
