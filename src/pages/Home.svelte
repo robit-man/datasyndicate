@@ -99,11 +99,9 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:slide class="description">
-              <p class="mediumtext" style="font-weight:100;margin:unset!important;">GENERATIVE</p>
-              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FRACTALS</b></p>
-              <p>MANDEL VIEWS is a collection of 111 unique MANDEL NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
-                <br><br>
-                With only 111 NFTs created, the symmetry, FRACTALS, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
+              <p class="mediumtext" style="font-weight:100;margin:unset!important;">MANDEL</p>
+              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>VIEWS</b></p>
+              <p>MandelViews is a collection of 111 unique MANDELVIEW NFTs—a digital version of hand selected computer generated fractal renderings found in the infinitely detailed Mandelbrot Fractal, which is one of the most complex objects known to mathematics..
               </p>
             </div>
             </Col>
@@ -194,9 +192,8 @@ import {
           <div transition:slide class="description">
             <p class="mediumtext" style="font-weight:100;margin:unset!important;">PURCHASING</p>
             <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>INFORMATION</b></p>
-            <p> <b>Purchasing a MANDEL VIEW will cost 0.5 ETH each</b>
-              <br><br>
-              Owning a VIEW will grant you access to monthly art raffles air dropping from MANDEL Curated Collections, and minters who hold until 2022 are eligible to claim a high quality physically framed art print out mailed for free.
+            <p> <b>Purchasing a MANDEL VIEW will cost ΦΞ (1.618033988749894848 ETH each.</b>
+              You are purchasing one of the MANDELS, a mandelviews NFT created from a high quality 8k resolution image so that it displays well on even the best monitors. <br><br>Each of the MANDELS is uniquely hand picked out of the Mandelbrot Set with the navigation and wisdom of decades of fractal explorations.
             </p>
           </div>
         </div>
@@ -224,7 +221,7 @@ import {
                   <br><br>
                   Click the fox and confirm with metamask
                   <br><br>
-                  Click mint, and claim your unique ERC-721 MANDEL VIEW!
+                  Click mint, and claim your unique ERC-721 MANDELVIEW!
                   <br><br>
                 </p>
                 {#if !$address}
@@ -309,7 +306,7 @@ flex-flow: column;
 justify-content: center;height:288px;width:512px;position:relative;margin:auto;}
 .img-effect > img{height:288px;width:512px;}
  .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
-}.imgbox{max-height:280px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+}.imgbox{display:none;max-height:280px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;}
 .description{text-align:left;margin-left:8rem;width:512px;}
 .half{width:auto;}
 .hero-title{padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:512px;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;background:#333!important;}
@@ -357,7 +354,7 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     justify-content:center;}
     .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;margin-top:1rem;}
     .img-effect > img{height:140px;width:250px;}
-    .imgbox{max-height:148px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+    .imgbox{max-height:148px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;}
     .second-container{padding:1rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem; display:none;}
