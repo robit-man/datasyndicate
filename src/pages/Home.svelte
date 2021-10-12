@@ -99,11 +99,9 @@ import {
             </Col>
             <Col style="width:auto;">
             <div transition:slide class="description">
-              <p class="mediumtext" style="font-weight:100;margin:unset!important;">GENERATIVE</p>
-              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>FRACTALS</b></p>
-              <p>MANDEL VIEWS is a collection of 111 unique MANDEL NFTs - a digital version of generative FRACTALS and post processed colour found in mathematics and art.
-                <br><br>
-                With only 111 NFTs created, the symmetry, FRACTALS, lines, and colour of the artwork yield a subjective rarity. Stored as an ERC-721 token, on the Ethereum blockchain for immutable history and decentralized ownership.
+              <p class="mediumtext" style="font-weight:100;margin:unset!important;">MANDEL</p>
+              <p class="mediumtext" style="font-weight:900;margin:unset!important;"><b>VIEWS</b></p>
+              <p>MandelViews is a collection of 111 unique MANDELVIEW NFTs—a digital version of hand selected computer generated fractal renderings found in the infinitely detailed Mandelbrot Fractal, which is one of the most complex objects known to mathematics..
               </p>
             </div>
             </Col>
@@ -309,7 +307,7 @@ flex-flow: column;
 justify-content: center;height:288px;width:512px;position:relative;margin:auto;}
 .img-effect > img{height:288px;width:512px;}
  .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
-}.imgbox{max-height:280px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+}.imgbox{display:none;max-height:280px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
 .description{text-align:left;margin-left:8rem;width:512px;}
 .half{width:auto;}
 .hero-title{padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:512px;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;background:#333!important;}
