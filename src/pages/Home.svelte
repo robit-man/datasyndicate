@@ -112,7 +112,7 @@ import {
         </div>
         <div class="second-container">
           <div class="img-effect">
-            <img transition:fade src="/imgs/views/Black Diamond Bacterium.JPG" style="z-index:2;position:relative;" alt="">
+            <img transition:fade src="/imgs/views/The next chapter winter twigs.jpg" style="z-index:2;position:relative;" alt="">
             <div class="imgbox"></div>
           </div>
         </div>
@@ -178,9 +178,9 @@ import {
 
               <Carousel>
                 
-                <img transition:fade src="/imgs/views/candy cane spirals.JPG" style="z-index:2;position:relative;width:256px" alt="">
-                <img transition:fade src="/imgs/views/Bearded Iris.JPG" style="z-index:2;position:relative;width:256px" alt="">
-                <img transition:fade src="/imgs/views/A golden Mandelbrot.JPG" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/views/Hurricane view.jpg" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/views/grey plumes.jpg" style="z-index:2;position:relative;width:256px" alt="">
+                <img transition:fade src="/imgs/views/line of faces.jpg" style="z-index:2;position:relative;width:256px" alt="">
                
               </Carousel>   
 
@@ -304,10 +304,12 @@ import {
 <style type="text/scss">
 .pagenumber > .bigfont{margin: unset !important;}
 .container-child-wrapper{width:100vw;height:100vh;display:flex;flex-flow:row;justify-content:flex-start;}
-.img-effect{display: flex;height:512px;width:512px;position:relative;margin:auto;}
-.img-effect > img{height:512px;width:512px;}
+.img-effect{display: flex;
+flex-flow: column;
+justify-content: center;height:288px;width:512px;position:relative;margin:auto;}
+.img-effect > img{height:288px;width:512px;}
  .rotate-title{transform:rotate(-90deg);text-align:left;width:min-content;
-}.imgbox{max-height:504px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+}.imgbox{max-height:280px;max-width:504px;position:absolute;width:504px;height:504px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
 .description{text-align:left;margin-left:8rem;width:512px;}
 .half{width:auto;}
 .hero-title{padding-left: 4rem;padding-top:4rem;padding-bottom:4rem;width:512px;height:calc(100vh - 8rem);display:flex;flex-flow:column;justify-content:center;background:#333!important;}
