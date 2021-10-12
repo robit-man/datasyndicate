@@ -356,8 +356,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
     flex-flow:column;
     justify-content:center;}
     .img-effect{display: flex;height:300px;width:300px;position:relative;margin:auto;margin-top:1rem;}
-    .img-effect > img{height:250px;width:250px;}
-    .imgbox{max-height:242px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
+    .img-effect > img{height:140px;width:250px;}
+    .imgbox{max-height:148px;max-width:242px;position:absolute;width:242px;height:242px;margin-left:1rem;margin-top:-1rem;border:4px solid white;}
     .second-container{padding:1rem 2rem; width:auto;display: flex;justify-content: center;flex-flow:column;}
     .bigfont{margin-bottom:1rem;font-size:3rem;line-height: 3rem!important;}
     .pagenumber{margin-bottom: 1rem; display:none;}
