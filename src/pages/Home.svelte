@@ -57,7 +57,7 @@ import {
 <Fullpage bind:activeSection arrows drag> 
 	<FullpageSection style=""  center>
 		<Container style="display:flex;flex-flow:row;justify-content:center;" class="text-center">
-      <div class="container-child-wrapper" >
+      <div class="container-child-wrapper extra" >
 				<div class="hero-title" >
           <div class="row ">
             <Col style="display:flex;flex-flow:column;justify-content:center;width:auto;">
@@ -366,6 +366,8 @@ justify-content: center;background-color:#111;width:calc(256px + 2rem);height:51
 .desktop{display:none;}
 .wrap-reverse{flex-flow: column-reverse!important;
 justify-content: flex-end!important;}
+.extra{background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F66.media.tumblr.com%2Fb013f97d196bbf410bf48720d0d97b71%2Ftumblr_odwecjPRDN1uzwgsuo1_400.gif&f=1&nofb=1);
+background-size: cover;}
   .container-child-wrapper{
     width:100vw;
     margin-top:132px;
@@ -375,7 +377,7 @@ justify-content: flex-end!important;}
     flex-flow:column;
     justify-content:flex-start;}   
  .row{display:flex;flex-flow:wrap;justify-content:center;}
-    .iframe-wrap{padding:2rem 2rem; width:calc(100% - 4rem);display: flex;flex-flow:column;justify-content: flex-end;height:60%;}
+    .iframe-wrap{mix-blend-mode: multiply;padding:2rem 2rem; width:calc(100% - 4rem);display: flex;flex-flow:column;justify-content: flex-end;height:60%;}
     .FRACTALS-container{width:80vw;height:80vw;border-radius:400px;margin:auto;max-width: 512px;
 max-height: 512px;}
     .svelte-fp-indicator{width:4rem!important;}
