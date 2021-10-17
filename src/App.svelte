@@ -40,9 +40,9 @@
          
           <p style="margin-top: 1rem;font-weight:100;font-size: 2rem;line-height:2rem;">MANDEL<b style="font-weight:900;">VIEWS</b></p>
         </div>
-        <div class="socials" style="display:flex;flex-flow:row;position:fixed;top:1rem;left:1rem;">
-          <a href="https://twitter.com/mandelviews"><img src="/imgs/twitter.png" width="64px" style="filter:invert(1)" alt=""></a>
-          <a href="https://discord.gg/nkH7MtQaZF"><img src="/imgs/discord.png" width="64px" style="filter:invert(1)" alt=""></a>
+        <div class="socials" style="display:flex;flex-flow:column;position:fixed;top:1rem;left:1rem;">
+          <a href="https://twitter.com/mandelviews"><img src="/imgs/twitter.png" width="32px" style="filter:invert(1);margin:1rem;" alt=""></a>
+          <a href="https://discord.gg/nkH7MtQaZF"><img src="/imgs/discord.png" width="32px" style="filter:invert(1);margin:1rem;" alt=""></a>
         </div>
       </header>
 
