@@ -37,18 +37,12 @@
       </Audio>
 	<header>
         <div class="nav-row">
-          <div class="icon-box">
-            <div class="dot-row">
-            <div class="icon-dot"></div>
-            <div class="icon-dot"></div>
-            <div class="icon-dot"></div>
-          </div>
-          <div class="dot-row">
-            <div class="icon-dot"></div>
-            <div class="icon-dot"></div>
-          </div>
-        </div>
+         
           <p style="margin-top: 1rem;font-weight:100;font-size: 2rem;line-height:2rem;">MANDEL<b style="font-weight:900;">VIEWS</b></p>
+        </div>
+        <div class="socials" style="display:flex;flex-flow:row;position:fixed;top:1rem;left:1rem;">
+          <a href="https://twitter.com/mandelviews"><img src="/imgs/twitter.png" width="64px" style="filter:invert(1)" alt=""></a>
+          <a href="https://discord.gg/nkH7MtQaZF"><img src="/imgs/discord.png" width="64px" style="filter:invert(1)" alt=""></a>
         </div>
       </header>
 
